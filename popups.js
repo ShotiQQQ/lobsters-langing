@@ -20,7 +20,7 @@ function mobileMenuPopUp(){
         body.classList.remove("body-active-pop-up")
         hero.classList.remove("hero-pop-up-displayed")
     })
-    
+
 }
 
 function loginPopUp(){

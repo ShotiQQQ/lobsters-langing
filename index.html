@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="webmaster_media.css">
     <title>Lobsters</title>
@@ -16,7 +16,7 @@
             <div class="header-nav">
 
                 <a href="index.html" class="lobsters-logo-link">
-                    <img src="assets/images/logo.png" alt="lobsters logo">
+                    <img src="assets/images/logo.svg" alt="Логотип компании Lobsters">
                 </a>
 
                 <nav class="nav">
@@ -26,14 +26,18 @@
                         <li class="nav-item"><a href="advertiser.html">Рекламодатель</a></li>
                     </ul>
 
-                    <div class="header-buttons">
-                        <button class="header-button log-in-button">Войти</button>
-                        <button class="header-button registration-button">Регистрация</button>
-                    </div>
+                    <ul class="header-buttons">
+                        <li>
+                            <button class="header-button log-in-button">Войти</button>
+                        </li>
+                        <li>
+                            <button class="header-button registration-button">Регистрация</button>
+                        </li>
+                    </ul>
 
                 </nav>
 
-                <button class="header-menu-button"><img src="assets/images/mobile_menu_button.svg"></button>
+                <button class="header-menu-button"></button>
             </div>
         </div>
     </header>
@@ -44,17 +48,20 @@
 
                 <div class="hero-content">
                     <div class="hero-content-title-holder">
-                        <img src="assets/decor_elements/squigly_yellow.svg" id="squigly-yellow">
+                        <div id="squigly-yellow"></div>
                         <h1>Зарабатывайте на<br class="hero-br-desktop"> контенте, <br class="hero-br1"> рекламируя <br class="hero-br-desktop"> крупные бренды</h1>
                     </div>
-                    <p>Монетизируйте свою аудиторию через платформу Lobsters и получайте <a href="/" class="hero-link">оплату за каждого клиента</a></p>
+                    <p>
+                        Монетизируйте свою аудиторию через платформу Lobsters и получайте
+                        <span class="hero-link">оплату за каждого клиента</span>
+                    </p>
                     <button class="hero-button" id="begin-work-button">Начать работу</button>
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <img src="assets/decor_elements/wave.svg" id="wave1">
-                        <img src="assets/images/lobster.svg" alt="" class="lobster1">
+                        <div id="wave1"></div>
+                        <div class="lobster1"></div>
                     </div>
                 </div>
             </div>
@@ -63,33 +70,33 @@
 
     <section class="steps">
         <div class="_container">
-            <div class="steps-row">
-                <div class="steps-card">
-                    <img src="assets/card_icons/card_num1.svg" class="steps-card-number">
+            <ol class="steps-row">
+                <li class="steps-card">
+                    <span class="steps-card-number">01</span>
                     <div class="steps-card-content">
-                        <h1>Выберите бренд</h1>
+                        <h3>Выберите бренд</h3>
                         <p>Работаем только с крупными и надежными брендами, продукты которых нужны миллионам людей</p>
                     </div>
-                </div>
-                <div class="steps-card">
-                    <img src="assets/card_icons/card_num2.svg" class="steps-card-number">
+                </li>
+                <li class="steps-card">
+                    <span class="steps-card-number">02</span>
                     <div class="steps-card-content">
-                        <h1>Разместите рекламу</h1>
+                        <h3>Разместите рекламу</h3>
                         <p>Поделимся с вами примерами успешных публикаций, чтобы вы
                         не тратили свое время</p>
                     </div>
-                </div>
-                <div class="steps-card">
-                    <img src="assets/card_icons/card_num3.svg" class="steps-card-number">
+                </li>
+                <li class="steps-card">
+                    <span class="steps-card-number">03</span>
                     <div class="steps-card-content">
-                        <h1>Получите оплату</h1>
+                        <h3>Получите оплату</h3>
                         <p>Оплачиваем каждого клиента
                         и не ограничиваем доход с одной
                         публикации</p>
                     </div>
-                </div>
-                <img src="assets/decor_elements/grass_right.svg" id="grass-right">
-            </div>
+                </li>
+                <div id="grass-right"></div>
+            </ol>
         </div>
     </section>
 
@@ -98,52 +105,52 @@
             <div class="description-wrapper">
 
                 <div class="description-title-holder">
-                    <h1>Зарабатывайте больше <br> и проще, чем «за фикс»</h1>
-                    <img src="assets/decor_elements/arrow_black1.svg" id="arrow-black-one">
+                    <h2>Зарабатывайте больше <br> и проще, чем «за фикс»</h2>
+                    <div id="arrow-black-one"></div>
                 </div>
 
-                    <div class="description-cards">
-                        <div class="description-card">
-                            <img src="assets/card_icons/atom.svg" alt="">
+                    <ul class="description-cards">
+                        <li class="description-card">
+                            <div class="description-card-img description-card-img--1"></div>
                             <p>Не нужно ждать и надеяться — крупные бренды уже готовы с вами работать</p>
-                        </div>
-                        <div class="description-card">
-                            <img src="assets/card_icons/checkmark.svg" alt="">
+                        </li>
+                        <li class="description-card">
+                            <div class="description-card-img description-card-img--2"></div>
                             <p>Не нужно подстраиваться — делайте рекламу в своем стиле без жестких брифов </p>
-                        </div>
-                        <div class="description-card">
-                            <img src="assets/card_icons/bar_chart.svg" alt="">
+                        </li>
+                        <li class="description-card">
+                            <div class="description-card-img description-card-img--3"></div>
                             <p>Не нужно постоянно искать спонсоров — бренды хотят работать долгосрочно</p>
-                        </div>
-                        <div class="description-card">
-                            <img src="assets/card_icons/line_chart.svg" alt="">
+                        </li>
+                        <li class="description-card">
+                            <div class="description-card-img description-card-img--4"></div>
                             <p>Не нужно полагаться на удачу — рекламируйте то,что реально приносит $$$</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
             </div>
         </div>
-        <!-- <img src="assets/decor_elements/decor_purple.svg" id="decor-purple"> -->
+
     </section>
 
     <section class="brands">
-        <img src="assets/decor_elements/decor_red.svg" id="decor-red">
+        <div id="decor-red"></div>
         <div class="_container">
             <div class="brands-wrapper">
                 <div class="brands-title-holder">
-                    <h1>Эти бренды <span id="brands-title-holder-underlined">уже готовы <img src="assets/decor_elements/underline_straight.svg" id="underline-straight"></span> разместить <br> рекламу у вас в блоге</h1>
+                    <h2>Эти бренды <span id="brands-title-holder-underlined">уже готовы </span> разместить <br> рекламу у вас в блоге</h2>
 
                 </div>
 
-                <div class="brands-cards">
-                    <div class="brand__card"><img src="assets/company_logos/tinkoff.svg" alt="tinkoff bank logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/alfa.svg" alt="alpha bank logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/ubrir.svg" alt="ubrir bank logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/mts.svg" alt="mts logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/gazprom.svg" alt="gazprom logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/renessans.svg" alt="renessans bank logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/sovkom.svg" alt="sovkom bank logo"></div>
-                    <div class="brand__card"><img src="assets/company_logos/otkritie.svg" alt="bank otkritie logo"></div>
-                </div>
+                <ul class="brands-cards">
+                    <li class="brand__card"><img src="assets/company_logos/tinkoff.svg" alt="Логотип Тинькофф банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/alfa.svg" alt="Логотип Альфа банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/ubrir.svg" alt="Логотип Убрир банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/mts.svg" alt="Логотип МТС банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/gazprom.svg" alt="Логотип Газпром банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/renessans.svg" alt="Логотип Ренессанс банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/sovkom.svg" alt="Логотип Совком банка"></li>
+                    <li class="brand__card"><img src="assets/company_logos/otkritie.svg" alt="Логотип банка Открытие"></li>
+                </ul>
 
                 <div class="brands-link-holder">
                     <div class="brands-link">
@@ -156,51 +163,51 @@
     </section>
 
     <section class="platforms">
-        <img src="assets/decor_elements/decor_yellow-white.svg" id="decor_yellow-white">
+        <div id="decor_yellow-white"></div>
         <div class="_container">
             <div class="platforms-wrapper">
                 <div class="platforms-title-holder">
-                    <img src="assets/decor_elements/arrow_red.svg" id="arrow_red">
-                    <h1>Работаем с любой платформой, <br class="platforms-br-desktop"> главное — качество аудитории</h1>
+                    <div id="arrow_red"></div>
+                    <h2>Работаем с любой платформой, <br class="platforms-br-desktop"> главное — качество аудитории</h2>
                 </div>
-                <div class="platforms-icons">
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/youtube.svg" alt="">
+                <ul class="platforms-icons">
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--1"></div>
                         <p>YouTube</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/telegram_platform_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--2"></div>
                         <p>Telegram</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/desktop_platform_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--3"></div>
                         <p>Сайты / Блоги</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/tiktok.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--4"></div>
                         <p>Tik Tok</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/dzen.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--5"></div>
                         <p>Яндекс Дзен</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/mobile_platforms_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--6"></div>
                         <p>Мобильные <br> приложения</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/instagram.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--7"></div>
                         <p>Instagram</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/vk.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--8"></div>
                         <p>Вконтакте</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/heart_media_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--9"></div>
                         <p>Рассмотрим <br> другие площадки</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -209,10 +216,10 @@
         <div class="_container">
             <div class="case-wrapper">
                 <div class="case-content">
-                    <img src="assets/decor_elements/grass_left.svg" id="grass-left">
-                    <h1 class="case-content-title">С нами реально <br class="case-br-desktop"> зарабатывают</h1>
+                    <div id="grass-left"></div>
+                    <h2 class="case-content-title">С нами реально <br class="case-br-desktop"> зарабатывают</h2>
                     <div class="case-content-text">
-                        <h1>Кейс: Миллион за 3 дня</h1>
+                        <h3>Кейс: Миллион за 3 дня</h3>
                         <p class="case-content-text-description">Кира Юхтенко, YouTube канал InvestFuture, в одном из выпусков анонсировала акцию “Вечной бесплатное обслуживание Tinkoff Black” и заработала 1 млн+.</p>
                         <p class="case-content-text-duration">Срок проведения акции: 3 дня</p>
                         <p class="case-content-stats">
@@ -224,17 +231,18 @@
                 </div>
 
                 <div class="video-holder"><iframe width="560" height="315" src="https://www.youtube.com/embed/6DgsVKKCKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <img src="assets/decor_elements/loop.svg" id="loop"></div>
+                <div id="loop"></div>
+                </div>
 
             </div>
         </div>
     </section>
 
     <section class="other-cases">
-        <img src="assets/decor_elements/decor_blue.svg" id="decor-blue">
+        <div id="decor-blue"></div>
         <div class="_container">
             <div class="other-cases-top-wrapper">
-                <h1>Другие кейсы</h1>
+                <h2>Другие кейсы</h2>
                 <div class="other-cases-slider-buttons">
                     <div class="slider-button" id="other-cases-prev-button"><div></div></div>
                     <div class="slider-button" id="other-cases-next-button"><div></div></div>
@@ -242,9 +250,9 @@
             </div>
         </div>
 
-        <div class="other-cases-cards-slider">
+        <ul class="other-cases-cards-slider">
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -254,7 +262,11 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/telegram_img.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -269,9 +281,9 @@
                     <p id="other-cases-card-highligthed">8 218 700 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -281,7 +293,11 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/telegram_img.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -296,9 +312,9 @@
                     <p id="other-cases-card-highligthed">5 257 610 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -308,7 +324,11 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/dzen_img.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/dzen_img.svg" alt="Иконка яндекс дзен">
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -323,9 +343,9 @@
                     <p id="other-cases-card-highligthed">5 113 050 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -335,7 +355,11 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/safari.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -350,9 +374,9 @@
                     <p id="other-cases-card-highligthed">1 963 500 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -362,7 +386,12 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/telegram_img.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
+                        </li>
+                    </ul>
+
                 </div>
 
 
@@ -377,9 +406,9 @@
                     <p id="other-cases-card-highligthed">1 904 650 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -389,7 +418,12 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/safari.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
+                        </li>
+                    </ul>
+
                 </div>
 
 
@@ -404,29 +438,9 @@
                     <p id="other-cases-card-highligthed">1 726 950 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <!-- <div class="other-cases-card" draggable="false">
-
-                <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Выгодные предложения банков</p>
-                </div>
-
-
-                <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/dzen_img.svg">
-                </div>
-
-                <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">917 550 Р</p>
-                </div>
-
-            </div> -->
-
-            <div class="other-cases-card" draggable="false">
+            <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
                     <p class="card-gray-title">Тематика</p>
@@ -436,7 +450,11 @@
 
                 <div class="other-cases-card-platforms">
                     <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/safari.svg">
+                    <ul class="list-of-cases">
+                        <li class="list-of-cases__item">
+                            <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -451,40 +469,18 @@
                     <p id="other-cases-card-highligthed">557 700 Р</p>
                 </div>
 
-            </div>
+            </li>
 
-            <!-- <div class="other-cases-card" draggable="false">
-
-                <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Разбор банковских продуктов</p>
-                </div>
-
-
-                <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
-                    <img src="assets/icons_media/safari.svg">
-                </div>
-
-                <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">435 000 Р</p>
-                </div>
-
-            </div> -->
-
-
-
-        </div>
+        </ul>
     </section>
 
 
     <section class="reviews">
-        <img src="assets/decor_elements/decor_pink.svg" id="decor-pink">
+        <div id="decor-pink"></div>
 
         <div class="_container">
             <div class="reviews-top-wrapper">
-                <h1>Уже 4 года <br class="reviews-br-1"> <span id="reviews-title-underlined">стараемся<img src="assets/decor_elements/underline_squigly.svg" id="underline-squigly"></span> для вас</h1>
+                <h2>Уже 4 года <br class="reviews-br-1"> <span id="reviews-title-underlined">стараемся</span> для вас</h2>
                 <div class="reviews-slider-buttons">
                     <div class="review-buttons-holder">
                         <div class="slider-button" id="reviews-prev-button"><div></div></div>
@@ -494,11 +490,11 @@
             </div>
         </div>
 
-        <div class="reviews-cards-slider">
+        <ul class="reviews-cards-slider">
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/konstantin.svg" alt="">
+                <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
 
                 <div class="reviews-card-text">
 
@@ -513,11 +509,11 @@
 
                 </div>
 
-            </div>
+            </li>
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/oleg.png" alt="">
+                <img src="assets/card_icons/oleg.png" alt="Фотография пользователя Олег">
 
                 <div class="reviews-card-text">
 
@@ -532,17 +528,16 @@
 
                 </div>
 
-            </div>
+            </li>
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/konstantin.svg" alt="">
+                <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
 
                 <div class="reviews-card-text">
 
                     <div class="reviews-card-top-text">
                         <p class="reviews-card-name">Иван</p>
-                        <!-- <p class="reviews-card-company">Накопи денег</p> -->
                     </div>
 
                     <p class="reviews-card-bottom-content">
@@ -552,17 +547,16 @@
 
                 </div>
 
-            </div>
+            </li>
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/oleg.png" alt="">
+                <img src="assets/card_icons/oleg.png" alt="Фотография пользователя Олег">
 
                 <div class="reviews-card-text">
 
                     <div class="reviews-card-top-text">
                         <p class="reviews-card-name">Максим</p>
-                        <!-- <p class="reviews-card-company">Накопи денег</p> -->
                     </div>
 
                     <p class="reviews-card-bottom-content">
@@ -571,11 +565,11 @@
 
                 </div>
 
-            </div>
+            </li>
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/konstantin.svg" alt="">
+                <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
 
                 <div class="reviews-card-text">
 
@@ -590,11 +584,11 @@
 
                 </div>
 
-            </div>
+            </li>
 
-            <div class="reviews-card" draggable="false">
+            <li class="reviews-card" draggable="false">
 
-                <img src="assets/card_icons/konstantin.svg" alt="">
+                <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
 
                 <div class="reviews-card-text">
 
@@ -609,8 +603,8 @@
 
                 </div>
 
-            </div>
-        </div>
+            </li>
+        </ul>
 
     </section>
 
@@ -619,21 +613,20 @@
             <div class="hero-wrapper" id="bottom-hero">
 
                 <div class="hero-content" id="bottom-hero-content">
-                    <h1>Получите первую выплату <br class="btm-hero-title-br-desktop"> уже <br class="btm-hero-title-br1"> через неделю</h1>
+                    <h2>Получите первую выплату <br class="btm-hero-title-br-desktop"> уже <br class="btm-hero-title-br1"> через неделю</h2>
                     <p>Начислим <span id="hero-highlighted">бонус 2500₽</span>, если за первую неделю у вас подтвердится минимум 1 заявка</p>
-                    <button class="hero-button" id="begin-work-button" >Начать работу</button>
-                    <img src="assets/decor_elements/arrow_black2.svg" id="arrow-black2">
+                    <button class="hero-button hero-button--2" id="begin-work-button">Начать работу</button>
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <img src="assets/images/lobster2.svg" alt="" class="lobster2">
-                        <img src="assets/decor_elements/wave.svg" id="wave2">
+                        <div class="lobster2"></div>
+                        <div id="wave2"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="assets/decor_elements/decor_yellow-black.svg" id="decor-yellow-black">
+        <div id="decor-yellow-black"></div>
     </section>
 
     <footer class="footer">
@@ -641,12 +634,20 @@
             <div class="footer-wrapper">
 
                 <nav class="footer-nav">
-                    <img src="assets/images/logo_white.png" alt="lobsters logo">
+                    <img src="assets/images/logo.svg" alt="Логотип компании Lobsters">
 
-                    <div class="footer-media-icons">
-                        <a href="mailto:account@lobsters.pro"><img src="assets/icons_media/mail_footer.svg" alt="email"></a>
-                        <a href="https://t.me/lobsters_support"><img src="assets/icons_media/telegram_footer.svg" alt="telegram"></a>
-                    </div>
+                    <ul class="footer-media-icons">
+                        <li>
+                            <a href="mailto:account@lobsters.pro">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M9.3 9.3h13.4c.9 0 1.6.8 1.6 1.7v10c0 1-.7 1.7-1.6 1.7H9.3c-.9 0-1.6-.8-1.6-1.7V11c0-1 .7-1.7 1.6-1.7Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M24.3 11 16 16.8 7.7 11"/><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/lobsters_support">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/><path fill="#fff" d="m24.5 7.6-.6.2a397.8 397.8 0 0 0-8.5 3.6L7.3 15l-.5.2-.3.4a1 1 0 0 0-.2.6c.1.9 1 1.1 1 1.1l4 1.3a1044 1044 0 0 0 1.7 5.6l.2.2h.2c.5.2.8 0 .8 0l2.4-2.3 4 3c.7.4 1.3.2 1.6 0l.5-.7 3-15v-.9a1 1 0 0 0-1.2-.8Zm0 1h.2v.5L22 24l-.2.2c-.1.2-.3.2-.7 0L16.7 21h-.1l-1.3-1 7.2-8.5a.4.4 0 0 0-.6-.6l-10.4 7-3.9-1.4s-.4-.2-.4-.4l.1-.2h.3v-.1l8.1-3.5a9537.4 9537.4 0 0 1 8.8-3.7Zm-4.7 4.7-5.5 6.4v.2l-.8 3.2-1.4-4.7 7.7-5.1ZM15 20.7l1 .8-1.5 1.3.5-2Z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
 
                 <div class="footer-columns-holder">
@@ -654,10 +655,14 @@
                     <div class="footer-column">
                         <h3 class="footer-column-title">Меню</h3>
 
-                        <div class="footer-column-links">
-                            <a class="footer-column-link" href="index.html">Вебмастер</a>
-                            <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
-                        </div>
+                        <ul class="footer-column-links">
+                            <li>
+                                <a class="footer-column-link" href="index.html">Вебмастер</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
+                            </li>
+                        </ul>
 
                     </div>
 
@@ -665,11 +670,17 @@
                     <div class="footer-column">
                         <h3 class="footer-column-title">Документы</h3>
 
-                        <div class="footer-column-links">
-                            <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
-                            <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
-                            <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
-                        </div>
+                        <ul class="footer-column-links">
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>
