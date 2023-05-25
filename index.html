@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Lobsters" content="Lobsters Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
@@ -95,8 +96,8 @@
                         публикации</p>
                     </div>
                 </li>
-                <div id="grass-right"></div>
             </ol>
+            <div id="grass-right"></div>
         </div>
     </section>
 
@@ -142,14 +143,22 @@
                 </div>
 
                 <ul class="brands-cards">
-                    <li class="brand__card"><img src="assets/company_logos/tinkoff.svg" alt="Логотип Тинькофф банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/alfa.svg" alt="Логотип Альфа банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/ubrir.svg" alt="Логотип Убрир банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/mts.svg" alt="Логотип МТС банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/gazprom.svg" alt="Логотип Газпром банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/renessans.svg" alt="Логотип Ренессанс банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/sovkom.svg" alt="Логотип Совком банка"></li>
-                    <li class="brand__card"><img src="assets/company_logos/otkritie.svg" alt="Логотип банка Открытие"></li>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--tinkoff"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--alpha"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--urbir"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--mts"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--gazprom"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--renes"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--sovcom"></div>
+                    <li class="brand__card">
+                        <div class="brand__img brand__img--open"></div>
                 </ul>
 
                 <div class="brands-link-holder">
@@ -230,7 +239,9 @@
                     </div>
                 </div>
 
-                <div class="video-holder"><iframe width="560" height="315" src="https://www.youtube.com/embed/6DgsVKKCKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-holder">
+                    <div id="video"></div>
+                    <iframe loading="lazy" width="590" height="336" src="https://www.youtube.com/embed/6DgsVKKCKOE" title="YouTube video player"></iframe>
                 <div id="loop"></div>
                 </div>
 
@@ -255,13 +266,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Скидки, промокоды</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Скидки, промокоды</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
@@ -271,14 +282,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">90 тысяч просмотров</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">90 тысяч просмотров</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">8 218 700 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">8 218 700 Р</span>
                 </div>
 
             </li>
@@ -286,13 +297,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Разбор банковских продуктов  </p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Разбор банковских продуктов  </span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
@@ -302,14 +313,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">10-15 тыс просмотров</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">10-15 тыс просмотров</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">5 257 610 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">5 257 610 Р</span>
                 </div>
 
             </li>
@@ -317,13 +328,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Выгодные предложения банков (проект Lobsters)</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Выгодные предложения банков (проект Lobsters)</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/dzen_img.svg" alt="Иконка яндекс дзен">
@@ -333,14 +344,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">25 - 50 тысяч дочитываний в месяц</p>
+                    <spanspan class="card-gray-title">Активность</spanspan>
+                    <spanspan class="cases-card-stats">25 - 50 тысяч дочитываний в месяц</spanspan>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">5 113 050 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">5 113 050 Р</span>
                 </div>
 
             </li>
@@ -348,13 +359,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Сайт подбора банковских продуктов и займов</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Сайт подбора банковских продуктов и займов</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
@@ -364,14 +375,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">40 тыс визитов / месяц</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">40 тыс визитов / месяц</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">1 963 500 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">1 963 500 Р</span>
                 </div>
 
             </li>
@@ -379,13 +390,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Скидки, промокоды</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Скидки, промокоды</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
@@ -396,14 +407,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">15 - 25 тысяч просмотров</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">15 - 25 тысяч просмотров</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">1 904 650 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">1 904 650 Р</span>
                 </div>
 
             </li>
@@ -411,13 +422,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Блог пользователя банков</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Блог пользователя банков</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
@@ -428,14 +439,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">90 тыс визитов / месяц</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">90 тыс визитов / месяц</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">1 726 950 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">1 726 950 Р</span>
                 </div>
 
             </li>
@@ -443,13 +454,13 @@
             <li class="other-cases-card" draggable="false">
 
                 <div class="other-cases-card-title">
-                    <p class="card-gray-title">Тематика</p>
-                    <p class="other-cases-card-title-text">Разбор банковских продуктов</p>
+                    <span class="card-gray-title">Тематика</span>
+                    <span class="other-cases-card-title-text">Разбор банковских продуктов</span>
                 </div>
 
 
                 <div class="other-cases-card-platforms">
-                    <p class="card-gray-title">Площадки</p>
+                    <span class="card-gray-title">Площадки</span>
                     <ul class="list-of-cases">
                         <li class="list-of-cases__item">
                             <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
@@ -459,14 +470,14 @@
 
 
                 <div class="other-cases-card-activity">
-                    <p class="card-gray-title">Активность</p>
-                    <p class="cases-card-stats">7 тыс просмотров / ролик</p>
+                    <span class="card-gray-title">Активность</span>
+                    <span class="cases-card-stats">7 тыс просмотров / ролик</span>
                 </div>
 
 
                 <div class="other-cases-card-revenue">
-                    <p class="card-gray-title">Заработок за 2022</p>
-                    <p id="other-cases-card-highligthed">557 700 Р</p>
+                    <span class="card-gray-title">Заработок за 2022</span>
+                    <span id="other-cases-card-highligthed">557 700 Р</span>
                 </div>
 
             </li>
@@ -638,12 +649,12 @@
 
                     <ul class="footer-media-icons">
                         <li>
-                            <a href="mailto:account@lobsters.pro">
+                            <a href="mailto:account@lobsters.pro" aria-label="Написать на почту">
                                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M9.3 9.3h13.4c.9 0 1.6.8 1.6 1.7v10c0 1-.7 1.7-1.6 1.7H9.3c-.9 0-1.6-.8-1.6-1.7V11c0-1 .7-1.7 1.6-1.7Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M24.3 11 16 16.8 7.7 11"/><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/></svg>
                             </a>
                         </li>
                         <li>
-                            <a href="https://t.me/lobsters_support">
+                            <a href="https://t.me/lobsters_support" aria-label="Написать в телеграм">
                                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/><path fill="#fff" d="m24.5 7.6-.6.2a397.8 397.8 0 0 0-8.5 3.6L7.3 15l-.5.2-.3.4a1 1 0 0 0-.2.6c.1.9 1 1.1 1 1.1l4 1.3a1044 1044 0 0 0 1.7 5.6l.2.2h.2c.5.2.8 0 .8 0l2.4-2.3 4 3c.7.4 1.3.2 1.6 0l.5-.7 3-15v-.9a1 1 0 0 0-1.2-.8Zm0 1h.2v.5L22 24l-.2.2c-.1.2-.3.2-.7 0L16.7 21h-.1l-1.3-1 7.2-8.5a.4.4 0 0 0-.6-.6l-10.4 7-3.9-1.4s-.4-.2-.4-.4l.1-.2h.3v-.1l8.1-3.5a9537.4 9537.4 0 0 1 8.8-3.7Zm-4.7 4.7-5.5 6.4v.2l-.8 3.2-1.4-4.7 7.7-5.1ZM15 20.7l1 .8-1.5 1.3.5-2Z"/></svg>
                             </a>
                         </li>
@@ -697,7 +708,6 @@
            <nav class="mobile-menu-nav">
                <a href="index.html">Веб-мастер</a>
                <a href="advertiser.html">Рекламодатель</a>
-               <!-- <a href="">FAQ</a> -->
            </nav>
        </div>
 
@@ -710,47 +720,70 @@
 
    <div class="login-popup hidden">
         <div class="login-popup-top">
-            <h1>Вход</h1>
-            <div class="close" id="login-popup-close"></div>
+            <h3>Вход</h3>
+            <button class="close" id="login-popup-close"></button>
         </div>
 
-        <form class="sign-in-form" method="post">
+        <form class="sign-in-form">
 
-            <label for="email">Email или телефон</label>
-            <input type="text" name="email" autocomplete="email" required/>
+            <label for="sign-in-email">Email или телефон</label>
+            <input type="text" id="sign-in-email" name="email" autocomplete="email" required/>
 
-            <label for="password">Пароль</label>
-            <input type="text" name="password" autocomplete="email" required/>
+            <label for="sign-in-password">Пароль</label>
+            <input type="password" id="sign-in-password" name="password" autocomplete="email" required/>
 
             <div class="sign-in-form-bottom">
                 <div class="remember-me-checkbox">
                     <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">Запомнить меня</label>
                 </div>
-                <a class="forgot-password">Забыли пароль?</a>
+                <button class="forgot-password">Забыли пароль?</button>
             </div>
 
             <button type="submit" class="sign-in-form-button">Войти</button>
         </form>
 
         <div class="login-other-buttons">
-            <button class="login-other-button"><img src="assets/icons_media/chrome-login.svg">Войти через Google</button>
-            <button class="login-other-button"><img src="assets/icons_media/apple-login.svg" id="apple">Войти через Apple</button>
-            <button class="login-other-button"><img src="assets/icons_media/facebook-login.svg">Войти через Facebook</button>
+            <button class="login-other-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><g clip-path="url(#a)"><path fill="#fff" d="M11 16.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/><path fill="url(#b)" d="M11 5.5h9.5a11 11 0 0 0-19 0l4.7 8.3A5.5 5.5 0 0 1 11 5.4Z"/><path fill="#1A73E8" d="M11 15.4a4.4 4.4 0 1 0 0-8.8 4.4 4.4 0 0 0 0 8.8Z"/><path fill="url(#c)" d="M15.8 13.8 11 22a11 11 0 0 0 9.5-16.5H11a5.5 5.5 0 0 1 4.8 8.3Z"/><path fill="url(#d)" d="M6.2 13.8 1.5 5.5A11 11 0 0 0 11 22l4.8-8.2a5.5 5.5 0 0 1-9.6 0Z"/></g><defs><linearGradient id="b" x1="1.5" x2="20.5" y1="6.9" y2="6.9" gradientUnits="userSpaceOnUse"><stop stop-color="#D93025"/><stop offset="1" stop-color="#EA4335"/></linearGradient><linearGradient id="c" x1="9.5" x2="19" y1="21.9" y2="5.4" gradientUnits="userSpaceOnUse"><stop stop-color="#FCC934"/><stop offset="1" stop-color="#FBBC04"/></linearGradient><linearGradient id="d" x1="12.2" x2="2.7" y1="21.3" y2="4.8" gradientUnits="userSpaceOnUse"><stop stop-color="#1E8E3E"/><stop offset="1" stop-color="#34A853"/></linearGradient><clipPath id="a"><path fill="#fff" d="M0 0h22v22H0z"/></clipPath></defs></svg>
+                Войти через Google
+            </button>
+            <button class="login-other-button">
+                <svg xmlns="http://www.w3.org/2000/svg" id="apple" fill="none" viewBox="0 0 20 24"><path fill="#000" d="M14.6 0h.2c.1 1.7-.5 3-1.3 3.9-.8.9-1.8 1.8-3.5 1.6a5 5 0 0 1 1.3-3.7c.7-.9 2-1.6 3.3-1.8Zm5.2 17.6a14 14 0 0 1-2 4c-.8 1-1.7 2.4-3.4 2.4-1.4 0-2.4-1-3.9-1s-2.4.8-3.8 1h-.5c-1-.2-1.9-1-2.5-1.7a16 16 0 0 1-3.5-8.8v-1a7 7 0 0 1 3-5.8 6 6 0 0 1 3.6-.8c.6 0 1.2.3 1.7.5s1 .5 1.7.5c.4 0 .8-.2 1.2-.4 1.2-.4 2.3-.9 3.8-.7 1.9.3 3.1 1.1 4 2.4a5 5 0 0 0-2.6 5 5.2 5.2 0 0 0 3.2 4.4Z"/></svg>
+                Войти через Apple
+            </button>
+            <button class="login-other-button">
+                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3215_60007)">
+                        <path d="M9.185 21.89C3.96 20.955 0 16.445 0 11C0 4.95 4.95 0 11 0C17.05 0 22 4.95 22 11C22 16.445 18.04 20.955 12.815 21.89L12.21 21.395H9.79L9.185 21.89Z" fill="url(#paint0_linear_3215_60007)"/>
+                        <path d="M15.2902 14.0791L15.7852 10.9991H12.8702V8.85406C12.8702 7.97406 13.2002 7.31406 14.5202 7.31406H15.9502V4.50906C15.1802 4.39906 14.3002 4.28906 13.5302 4.28906C11.0002 4.28906 9.24023 5.82906 9.24023 8.57906V10.9991H6.49023V14.0791H9.24023V21.8341C9.84523 21.9441 10.4502 21.9991 11.0552 21.9991C11.6602 21.9991 12.2652 21.9441 12.8702 21.8341V14.0791H15.2902Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_3215_60007" x1="11.0005" y1="21.2349" x2="11.0005" y2="-0.00405228" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0062E0"/>
+                            <stop offset="1" stop-color="#19AFFF"/>
+                        </linearGradient>
+                        <clipPath id="clip0_3215_60007">
+                            <rect width="22" height="22" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Войти через Facebook
+            </button>
         </div>
    </div>
 
    <div class="registration-popup hidden">
         <div class="registration-popup-top">
             <h1>Регистрация</h1>
-            <div class="close" id="registration-popup-close"></div>
+            <button class="close" id="registration-popup-close"></button>
         </div>
 
         <p class="login-popup-warning">
             Внимание! Указывайте только корректные контактные данные. Если мы не сможем связаться с вами, вы не получите доступ к личному кабинету
         </p>
 
-        <form class="registration-popup-form" method="post">
+        <form class="registration-popup-form">
 
             <label for="name">ФИО</label>
             <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" required/>
@@ -860,5 +893,6 @@
 
     <script src="main.js"></script>
     <script src="popups.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 function otherCasesSliderClick() {
     const otherCasesSlider = document.querySelector(".other-cases-cards-slider")
     const otherCasesPrevBtn = document.querySelector("#other-cases-next-button")

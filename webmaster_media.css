@@ -232,8 +232,8 @@
     }
 
     .brands-cards {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(88px, 1fr));
     }
 
     .brand__card img {
@@ -644,8 +644,8 @@
     }
 
     .brands-cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, minmax(88px, 1fr));
         column-gap: 8px;
         row-gap: 8px;
     }
@@ -653,10 +653,6 @@
     .brands-title-holder h2 {
         font-size: 24px;
         line-height: 28px;
-    }
-
-    .brand__card img {
-        max-width: 120px;
     }
 
     .brands-link-holder {
@@ -1029,25 +1025,9 @@
 }
 
 @media(max-width: 400px) {
-    .brands-wrapper {
-        align-items: center;
-    }
-
-
-    .brands-cards {
-        grid-template-columns: 130px 130px;
-        grid-template-rows: 1fr 1fr 1fr;
-        column-gap: 8px;
-        row-gap: 8px;
-    }
-
-    .brand__card img {
-        max-width: 90px;
-    }
 
     .brand__card {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 15px;
     }
 
     .platforms-icon p {
