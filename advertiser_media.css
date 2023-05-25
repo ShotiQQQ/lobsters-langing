@@ -5,7 +5,7 @@
     }
 
     /* HEADER */
-    
+
     .header {
         margin-bottom: 100px;
         height: 56px;
@@ -48,7 +48,8 @@
     }
 
     #squigly-yellow {
-        max-width: 100px;
+        width: 100px;
+        height: 59px;
         top: -30px;
         left: -30px;
     }
@@ -62,12 +63,14 @@
     }
 
     .lobster1 {
-        max-width: 288px;
+        width: 288px;
+        height: 296px;
         left: 70px;
     }
 
     #wave1 {
-        max-width: 40px;
+        width: 46px;
+        height: 52px;
         left: 310px;
         top: -40px;
     }
@@ -102,7 +105,7 @@
         align-self: flex-end;
     }
 
-    
+
 
     /* STEPS */
     .steps {
@@ -123,7 +126,7 @@
         margin-bottom: 37px;
     }
 
-    .steps-card-content h1 {
+    .steps-card-content h3 {
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
@@ -134,7 +137,7 @@
         font-size: 14px;
         line-height: 20px;
     }
-    
+
 
     /* DESCRIPTION */
     .description {
@@ -143,7 +146,9 @@
     }
 
     #decor-purple {
-        display: none;
+        width: 140px;
+        height: 149px;
+        right: -50px;
     }
 
     .description-card {
@@ -156,7 +161,7 @@
         margin-bottom: 24px;
     }
 
-    .description-title-holder h1 {
+    .description-title-holder h2 {
         max-width: 580px;
         min-height: 108px;
         font-weight: 600;
@@ -211,9 +216,10 @@
     }
 
     #decor-blue {
-        max-width: 80px
+        width: 105px;
+        height: 105px;
+        left: -30px;
     }
-
 
     .review-title-long {
         font-weight: 600;
@@ -245,12 +251,13 @@
     }
 
     #decor-red {
-        max-width: 80px;
-        top: -80px;
+        width: 111px;
+        height: 104px;
         left: -20px;
+        bottom: -115px;
     }
 
-    .platforms-title-holder h1 {
+    .platforms-title-holder h2 {
         font-weight: 600;
         font-size: 32px;
         line-height: 36px;
@@ -260,22 +267,19 @@
         display: block;
     }
 
-    .platforms-title-holder h1 {
+    .platforms-title-holder h2 {
         text-align: center;
     }
 
-    #arrow-red {
-        display: none;
+    .platforms ._container {
+        overflow: hidden;
     }
 
     .platforms-icons {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         column-gap: 102px;
     }
-
-
-
 
     /* HERO BOTTOM */
     #bottom-hero{
@@ -285,10 +289,10 @@
 
     #bottom-hero-content{
         max-width: 1000px;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
-    #bottom-hero-content h1{
+    #bottom-hero-content h2{
         font-weight: 600;
         font-size: 32px;
         line-height: 36px;
@@ -296,13 +300,15 @@
 
     .lobster2 {
         position: relative;
-        max-width: 288px;
+        width: 288px;
+        height: 296px;
         bottom: 50px;
         left: 140px;
     }
 
     #wave2 {
-        max-width: 40px;
+        width: 46px;
+        height: 52px;
         left: 360px;
         top: 30px;
     }
@@ -355,7 +361,7 @@
     .contacts-us-popup-buttons {
         width: 100%;
         max-width: 1000px;
-    } 
+    }
 
     .mobile-menu {
         width: 80%;
@@ -381,8 +387,10 @@
     }
 
     #wave1 {
+        width: 36px;
+        height: 41px;
         left: 170px;
-        top: 0px;
+        top: 0;
     }
 
     .header-nav-links {
@@ -391,6 +399,10 @@
 
     .header-menu-button {
         display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("assets/images/mobile_menu_button.svg");
+        background-size: 100% 100%;
     }
 
     /* HERO */
@@ -410,32 +422,25 @@
         align-items: center;
     }
 
-    .hero-image img {
-        position: relative;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-    }
-
     .hero-image-content {
         position: relative;
     }
 
     #squigly-yellow {
         display: block;
-        max-width: 78px;
-        left: 25px;
+        width: 78px;
+        height: 46px;
+        left: 15px;
     }
-
-    
 
     .lobster1 {
-        max-width: 213px;
-    }
-
-    .hero {
-        margin-bottom: 69px;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 222px;
+        height: 203px;
     }
 
     .hero-wrapper {
@@ -481,9 +486,13 @@
         gap: 16px;
     }
 
-    .description-title-holder h1 {
+    .description-title-holder h2 {
         font-weight: 600;
         font-size: 24px;
+    }
+
+    #arrow-red {
+        display: none;
     }
 
 
@@ -499,10 +508,13 @@
     }
 
     #decor-purple {
-        max-width: 73px;
+        width: 74px;
+        height: 79px;
+        top: -45px;
+        right: -20px;
     }
 
-    .description-title-holder h1 {
+    .description-title-holder h2 {
         font-weight: 600;
         font-size: 24px;
         line-height: 28px;
@@ -529,7 +541,12 @@
         margin-bottom: 29px;
     }
 
-    .platforms-title-holder h1 {
+    .platforms-icon-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .platforms-title-holder h2 {
         font-weight: 600;
         font-size: 24px;
         line-height: 28px;
@@ -594,7 +611,7 @@
     }
 
 
-    .review-card-content h1 {
+    .review-card-content h3 {
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
@@ -611,15 +628,15 @@
         display: none;
     }
 
-    
+
 
     /* HERO BOTTOM */
     #bottom-hero {
-        margin: 0%;
+        margin: 0;
         margin-bottom: 62px;
     }
 
-    #bottom-hero-content h1 {
+    #bottom-hero-content h2 {
         font-weight: 600;
         font-size: 24px;
         line-height: 28px;
@@ -641,14 +658,24 @@
         display: none;
     }
 
+    .contact:after {
+        content: none;
+    }
+
     #wave2 {
-        max-width: 40px;
+        width: 36px;
+        height: 41px;
         left: 170px;
-        top: 0px;
+        top: 0;
     }
 
     .lobster2 {
-        max-width: 213px;
+        width: 213px;
+        height: 232px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
     }
 
     #decor-yellow-black {
@@ -676,6 +703,6 @@
     .platforms-icons {
         column-gap: 8px;
     }
-} 
+}
 
 
