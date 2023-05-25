@@ -768,6 +768,12 @@ ul, ol {
 
 .video-holder {
     position: relative;
+    width: 100%;
+    max-width: 590px;
+    height: 336px;
+    cursor: pointer;
+    background-image: url("assets/images/video-back.webp");
+    background-size: 100% 100%;
 }
 
 #loop {
@@ -778,6 +784,7 @@ ul, ol {
     height: 57px;
     background-image: url("assets/decor_elements/loop.svg");
     background-size: 100% 100%;
+    pointer-events: none;
 }
 
 iframe {
