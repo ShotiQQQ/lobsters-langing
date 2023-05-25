@@ -1336,6 +1336,7 @@ ul, ol {
     padding: 9px 24px 9px 24px;
     border: 1px solid #C9C9C9;
     border-radius: 100px;
+    color: #000;
 }
 
 .mobile-menu-button:hover {

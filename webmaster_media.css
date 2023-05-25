@@ -980,17 +980,8 @@
     }
 
     .status-list {
-        /* max-width: 270px; */
         width: fit-content;
     }
-
-    /* .registration-popup-dropdown-button {
-        max-width: 311px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        gap: 120px;
-        margin-bottom: 16px;
-    } */
 
     .registration-popup-submit-button {
         padding-top: 10px;
