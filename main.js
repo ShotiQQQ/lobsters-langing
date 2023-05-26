@@ -1,20 +1,3 @@
-function otherCasesSliderClick() {
-    const otherCasesSlider = document.querySelector(".other-cases-cards-slider")
-    const otherCasesPrevBtn = document.querySelector("#other-cases-next-button")
-    const otherCasesNextBtn = document.querySelector('#other-cases-prev-button')
-
-    const otherCasesFirstCard = document.querySelectorAll(".other-cases-card")[0]
-    let otherCasesFirstCardWidth = otherCasesFirstCard.clientWidth
-
-    otherCasesNextBtn.addEventListener('click', function(){
-        otherCasesSlider.scrollLeft -=  otherCasesFirstCardWidth
-    })
-
-    otherCasesPrevBtn.addEventListener('click', function(){
-        otherCasesSlider.scrollLeft +=  otherCasesFirstCardWidth
-    })
-
-}
 
 function reviewsSliderClick() {
     const reviewsSlider = document.querySelector(".reviews-cards-slider")
@@ -54,6 +37,30 @@ function stickyHeader() {
 }
 
 
+const swiper = new Swiper('.other-cases-slider', {
+    navigation: {
+        nextEl: '#other-cases-next-button',
+        prevEl: '#other-cases-prev-button',
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 8
+        },
+
+        760: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        },
+
+        1020: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        }
+    }
+
+});
+
 stickyHeader()
-otherCasesSliderClick()
 reviewsSliderClick()

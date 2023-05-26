@@ -830,50 +830,60 @@ ul, ol {
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid #C9C9C9;
+    transition: background-color .3s ease;
 }
 
 .slider-button:hover {
     background-color: #E30029;
 }
 
-.slider-button div {
+.swiper-button-disabled {
+    cursor: default;
+}
+
+.swiper-button-disabled:hover {
+    background-color: #FFF;
+}
+
+.slider-button span {
     position: absolute;
     height: 11px;
     width: 11px;
     border-top: 1px solid;
     border-left: 1px solid;
+    transition: color .3s ease;
 }
 
-.slider-button:hover div{
-    color:#FFFFFF;
+.slider-button:hover span {
+    color: #FFF;
 }
 
-#other-cases-next-button div {
+.swiper-button-disabled:hover span {
+    color: #C9C9C9;
+}
+
+#other-cases-next-button span {
     top: 10px;
     left: 7px;
     transform: rotate(135deg);
 }
 
-#other-cases-prev-button div {
+#other-cases-prev-button span {
     top: 10px;
     right: 7px;
     transform: rotate(-45deg);
 }
 
-
-
+.other-cases-slider {
+    max-width: 1440px;
+}
 
 .other-cases-cards-slider-holder {
     overflow: hidden;
 }
 
-.other-cases-cards-slider {
-    display: flex;
-    gap: 20px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-snap-type: both;
+.other-cases-cards-slider.swiper-wrapper {
+   box-sizing: border-box;
 }
 
 .other-cases-cards-slider::-webkit-scrollbar {
@@ -881,12 +891,19 @@ ul, ol {
 }
 
 .other-cases-card {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     width: 488px;
-    background-color: rgba(216, 230, 255, 0.4);
+    background-color: rgba(216, 230, 255, .4);
     padding-top: 24px;
     padding-left: 24px;
     padding-bottom: 24px;
+    min-height: 100%;
+}
+
+.other-cases-card.swiper-slide {
+    height: auto;
 }
 
 .other-cases-card-title span{
@@ -902,6 +919,7 @@ ul, ol {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 16px;
+    margin-top: auto;
 }
 
 .other-cases-card-activity span {
