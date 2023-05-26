@@ -1253,6 +1253,7 @@ ul, ol {
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .3);
+    z-index: 10;
 }
 
 .hidden{
@@ -1377,6 +1378,7 @@ ul, ol {
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .3);
     max-height: 95vh;
     overflow-y: auto;
+    z-index: 10;
 }
 
 .login-popup::-webkit-scrollbar {
@@ -1534,6 +1536,7 @@ ul, ol {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .3);
+    z-index: 10;
 }
 
 @supports (max-height: 95dvh) {
