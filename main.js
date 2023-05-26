@@ -37,7 +37,7 @@ function stickyHeader() {
 }
 
 
-const swiper = new Swiper('.other-cases-slider', {
+const otherCasesSwiper = new Swiper('.other-cases-slider', {
     navigation: {
         nextEl: '#other-cases-next-button',
         prevEl: '#other-cases-prev-button',
@@ -61,6 +61,33 @@ const swiper = new Swiper('.other-cases-slider', {
     }
 
 });
+
+const reviewSwiper = new Swiper('.reviews-swiper', {
+    navigation: {
+        nextEl: '#reviews-next-button',
+        prevEl: '#reviews-prev-button',
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1.3,
+            spaceBetween: 8
+        },
+
+        760: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        },
+
+        1020: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        }
+    }
+
+});
+
+
 
 stickyHeader()
 reviewsSliderClick()

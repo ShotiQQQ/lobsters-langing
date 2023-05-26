@@ -978,6 +978,10 @@ ul, ol {
     background-size: 100% 100%;
 }
 
+.reviews-swiper {
+    max-width: 1440px;
+}
+
 .reviews-top-wrapper {
     margin-bottom: 44px;
     display: flex;
@@ -1013,13 +1017,13 @@ ul, ol {
     gap: 8px;
 }
 
-#reviews-next-button div {
+#reviews-next-button span {
     top: 10px;
     left: 8px;
     transform: rotate(135deg);
 }
 
-#reviews-prev-button div {
+#reviews-prev-button span {
     top: 10px;
     right: 8px;
     transform: rotate(-45deg);
@@ -1029,28 +1033,20 @@ ul, ol {
     border: inherit;
 }
 
-.reviews-cards-slider {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-snap-type: both;
+.reviews-cards-slider.swiper-wrapper {
+    box-sizing: border-box;
 }
-
-.reviews-cards-slider::-webkit-scrollbar {
-    display: none;
-}
-
 
 .reviews-card {
-    flex-shrink: 0;
     display: flex;
     gap: 24px;
-    width: 590px;
-    padding: 24px 24px 24px 24px;
-    background-color: #FFFFFF;
+    padding: 24px;
+    background-color: #FFF;
+    min-height: 100%;
+}
+
+.reviews-card.swiper-slide {
+    height: auto;
 }
 
 .reviews-card img {

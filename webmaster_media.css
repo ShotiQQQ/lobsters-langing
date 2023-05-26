@@ -367,7 +367,13 @@
     }
 
     .reviews-card {
-        max-width: 328px;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .reviews-card img {
+        width: 44px;
+        height: 44px;
     }
 
     .reviews-card-name {
@@ -822,10 +828,6 @@
         padding-bottom: 32px;
     }
 
-    .reviews-card {
-        max-width: 255px;
-    }
-
     .reviews-card img {
         width: 32px;
         height: 32px;
@@ -906,13 +908,14 @@
 
     /* HERO BOTTOM */
     #bottom-hero {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     #bottom-hero-content h2 {
         font-weight: 600;
         font-size: 24px;
         line-height: 28px;
+        margin-bottom: 24px;
     }
 
     .hero-button--2::after {
