@@ -755,9 +755,7 @@
 
     .other-cases-card {
         max-width: 255px;
-        padding-bottom: 0;
-        padding-top: 16px;
-        padding-left: 16px;
+        padding: 16px;
     }
 
     .card-gray-title {

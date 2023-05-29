@@ -897,14 +897,24 @@ ul, ol {
     flex-shrink: 0;
     width: 488px;
     background-color: rgba(216, 230, 255, .4);
-    padding-top: 24px;
-    padding-left: 24px;
-    padding-bottom: 24px;
+    padding: 24px;
     min-height: 100%;
 }
 
 .other-cases-card.swiper-slide {
     height: auto;
+}
+
+.other-cases-card-title-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 6px;
+}
+
+.other-cases-card-title-top span {
+    margin-bottom: 0;
 }
 
 .other-cases-card-title span{
@@ -920,7 +930,6 @@ ul, ol {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 16px;
-    margin-top: auto;
 }
 
 .other-cases-card-activity span {
@@ -933,6 +942,10 @@ ul, ol {
     font-weight: 600;
     font-size: 14px;
     color: #676767;
+}
+
+.other-cases-card-revenue {
+    margin-top: auto;
 }
 
 .list-of-cases {
