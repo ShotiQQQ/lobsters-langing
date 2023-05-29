@@ -1349,6 +1349,7 @@ ul, ol {
 .mobile-menu-nav {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
     font-weight: 600;
     font-size: 16px;
@@ -1369,6 +1370,10 @@ ul, ol {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.mobile-menu-buttons a {
+    text-align: center;
 }
 
 .header-button {
@@ -1623,6 +1628,29 @@ ul, ol {
     transition: border-color .3s ease;
 }
 
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.reg-form input {
+    margin-bottom: 0;
+}
+
+.error {
+    color: #FF002E;
+    font-size: 11px;
+}
+
+.registration-popup-form .error-input {
+    border-color: #FF002E;
+}
+
+.registration-popup-form .error-input:focus {
+    border-color: #FF002E;
+}
+
 .registration-popup-form input::placeholder {
     font-weight: 500;
     font-size: 14px;
@@ -1646,12 +1674,11 @@ ul, ol {
     justify-content: space-evenly;
     width: 162px;
     position: relative;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     background: #FFFFFF;
     border-radius: 100px;
     border: 1px solid #C9C9C9;
-    margin-bottom: 20px;
     color: #000;
 }
 
@@ -1665,9 +1692,9 @@ ul, ol {
     background-color: #FFFFFF;
     border: 1px solid #C9C9C9;
     border-radius: 10px;
-    top: 60px;
+    top: 46px;
     height: 134px;
-    bottom: 0px;
+    bottom: 0;
 }
 
 #status-list-close-button {
@@ -1699,6 +1726,7 @@ ul, ol {
 
 .registration-drop-down-holder {
     position: relative;
+    margin-bottom: 12px;
 }
 
 .agreement-checkbox {

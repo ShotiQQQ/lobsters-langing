@@ -6,7 +6,9 @@
     <meta name="Lobsters" content="Lobsters Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script async src="https://cdn.jsdelivr.net/npm/maska@2/dist/maska.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="registration.js"></script>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="webmaster_media.css">
@@ -31,7 +33,7 @@
 
                     <ul class="header-buttons">
                         <li>
-                            <a href="/" class="header-button log-in-button">Войти</a>
+                            <a href="https://stat.thelobsters.ru/login" class="header-button log-in-button">Войти</a>
                         </li>
                         <li>
                             <button class="header-button registration-button">Регистрация</button>
@@ -839,7 +841,7 @@
        </div>
 
        <div class="mobile-menu-buttons">
-            <button class="mobile-menu-button" id="mobile-login-button">Войти</button>
+            <a href="https://stat.thelobsters.ru/login" class="mobile-menu-button" id="mobile-login-button">Войти</a>
             <button class="mobile-menu-button" id="mobile-registration-button">Регистрация</button>
        </div>
    </div>
@@ -859,14 +861,23 @@
             <label for="name">ФИО</label>
             <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" required/>
 
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" required/>
+            <div class="reg-form">
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" required data-validate="regInput"/>
+                <span hidden class="error error-email" data-validate="regError">Неверный формат e-mail</span>
+            </div>
 
-            <label for="media-link">Телеграм / whats app</label>
-            <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" required/>
+            <div class="reg-form">
+                <label for="media-link">Телеграм / whats app</label>
+                <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" required data-validate="regInput"/>
+                <span hidden class="error error-link" data-validate="regError">Неверный формат ссылки</span>
+            </div>
 
-            <label for="phone">Телефон</label>
-            <input type="text" name="phone" id="phone" placeholder="Укажите телефон" required/>
+            <div class="reg-form">
+                <label for="phone">Телефон</label>
+                <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон" required data-validate="regInput">
+                <span hidden class="error error-tel" data-validate="regError">Неверный формат номера телефона</span>
+            </div>
 
             <label for="platform">Площадка</label>
             <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" required/>
@@ -890,79 +901,17 @@
 
                     <button class="close" id="status-list-close-button"></button>
                 </ul>
-
+                <span hidden class="error error-status" data-validate="regError">Необходимо выбрать один из вариантов статуса</span>
             </div>
 
             <div class="agreement-checkbox">
-                <input type="checkbox" id="agreement" name="agreement">
+                <input type="checkbox" id="agreement" name="agreement" required>
                 <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
             </div>
 
-            <button class="registration-popup-submit-button">Оставить заявку</button>
+            <button class="registration-popup-submit-button" id="registration">Оставить заявку</button>
         </form>
    </div>
-
-   <div class="forgot-password-popup hidden">
-    <div class="forgot-password-popup-top">
-        <h1>Восстановление пароля</h1>
-        <button class="close" id="forgot-password-popup-close"></button>
-    </div>
-
-    <p class="forgot-password-popup-warning">
-        Если вы забыли пароль, введите ваш e-mail
-    </p>
-
-    <form class="forgot-password-form" method="post">
-        <label for="forgot-password-email">E-mail</label>
-        <input name="email" type="text" required>
-
-        <button type="submit">Восстановить</button>
-    </form>
-
-    <div class="return-to-login">Вернуться ко входу</div>
-
-   </div>
-
-   <script>
-       function forgotPasswordPopUp() {
-            const hero = document.querySelector(".top-hero")
-            const forgotPasswordPopUp = document.querySelector(".forgot-password-popup")
-            const forgotPasswordButton = document.querySelector(".forgot-password")
-            const forgotPasswordClose = document.querySelector("#forgot-password-popup-close")
-            const loginPopup = document.querySelector(".login-popup")
-            const returnToLogin = document.querySelector(".return-to-login")
-            const header = document.querySelector(".header")
-            const body = document.querySelector("body")
-
-            forgotPasswordButton.addEventListener('click', function(){
-                forgotPasswordPopUp.classList.remove('hidden')
-                forgotPasswordPopUp.classList.add("shown")
-                loginPopup.classList.remove("shown")
-                loginPopup.classList.add("hidden")
-                header.classList.add("header-popup-active")
-            })
-
-            forgotPasswordClose.addEventListener('click', function(){
-                forgotPasswordPopUp.classList.add('hidden')
-                forgotPasswordPopUp.classList.remove("shown")
-                header.classList.remove("header-popup-active")
-                body.classList.remove("body-active-pop-up")
-                hero.classList.remove("hero-pop-up-displayed")
-            })
-
-            returnToLogin.addEventListener('click', function(){
-                forgotPasswordPopUp.classList.add('hidden')
-                forgotPasswordPopUp.classList.remove("shown")
-                loginPopup.classList.add("shown")
-                loginPopup.classList.remove("hidden")
-            })
-
-
-
-        }
-
-        forgotPasswordPopUp()
-   </script>
 
     <script src="main.js"></script>
     <script src="popups.js"></script>
