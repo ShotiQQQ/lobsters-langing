@@ -887,13 +887,8 @@
 
     .reviews-card-top-text {
         flex-direction: column;
-
+        align-items: flex-start;
     }
-
-    /* .reviews-card img {
-        width: 32px;
-        height: 32px;
-    } */
 
     .reviews-card-company {
         text-align:inherit;

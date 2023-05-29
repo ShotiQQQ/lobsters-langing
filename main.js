@@ -1,21 +1,3 @@
-
-function reviewsSliderClick() {
-    const reviewsSlider = document.querySelector(".reviews-cards-slider")
-    const reviewsPrevBtn = document.querySelector("#reviews-next-button")
-    const reviewsNextBtn = document.querySelector('#reviews-prev-button')
-
-    const reviewsFirstCard = document.querySelectorAll(".reviews-card ")[0]
-    let reviewsFirstCardWidth = reviewsFirstCard.clientWidth
-
-    reviewsNextBtn.addEventListener('click', function(){
-        reviewsSlider.scrollLeft -=  reviewsFirstCardWidth
-    })
-
-    reviewsPrevBtn.addEventListener('click', function(){
-        reviewsSlider.scrollLeft +=  reviewsFirstCardWidth
-    })
-}
-
 function stickyHeader() {
     window.onscroll = function() {myFunction()};
 
@@ -90,4 +72,3 @@ const reviewSwiper = new Swiper('.reviews-swiper', {
 
 
 stickyHeader()
-reviewsSliderClick()

@@ -164,6 +164,7 @@ ul, ol {
 
 .header-buttons {
     display: flex;
+    align-items: center;
     column-gap: 16px;
 }
 
@@ -1052,11 +1053,16 @@ ul, ol {
 .reviews-card img {
     width: 68px;
     height: 68px;
+    border-radius: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #C9C9C9;
 }
 
 .reviews-card-top-text {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
     margin-bottom: 12px;
 }
 
@@ -1066,8 +1072,18 @@ ul, ol {
 }
 
 .reviews-card-company {
+    text-align: right;
     font-weight: 600;
     font-size: 14px;
+    color: #676767;
+    transition: color .3s ease;
+}
+
+.reviews-card-company:hover {
+    color: #E30029;
+}
+
+.reviews-card-company_not-link:hover {
     color: #676767;
 }
 
@@ -1075,6 +1091,15 @@ ul, ol {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
 }
 
 /* ----- BOTTOM HERO ----- */

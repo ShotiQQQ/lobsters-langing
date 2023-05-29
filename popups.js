@@ -23,43 +23,6 @@ function mobileMenuPopUp(){
 
 }
 
-function loginPopUp(){
-    const header = document.querySelector(".header")
-    const body = document.querySelector("body")
-    const loginPopup = document.querySelector(".login-popup")
-    const loginButton = document.querySelector(".log-in-button")
-    const mobileLoginButton = document.querySelector("#mobile-login-button")
-    const loginClose = document.querySelector("#login-popup-close")
-    const mobileMenu = document.querySelector(".mobile-menu")
-    const hero = document.querySelector(".top-hero")
-
-    loginButton.addEventListener('click', function(){
-        loginPopup.classList.remove("hidden")
-        loginPopup.classList.add("shown")
-        mobileMenu.classList.add("hidden")
-        body.classList.add("body-active-pop-up")
-        header.classList.add("header-popup-active")
-        hero.classList.add("hero-pop-up-displayed")
-    })
-
-    mobileLoginButton.addEventListener('click', function(){
-        loginPopup.classList.remove("hidden")
-        loginPopup.classList.add("shown")
-        mobileMenu.classList.add("hidden")
-        header.classList.add("header-popup-active")
-        hero.classList.add("hero-pop-up-displayed")
-    })
-
-    loginClose.addEventListener('click', function(){
-        loginPopup.classList.remove("shown")
-        loginPopup.classList.add("hidden")
-        mobileMenu.classList.add("hidden")
-        body.classList.remove("body-active-pop-up")
-        header.classList.remove("header-popup-active")
-        hero.classList.remove("hero-pop-up-displayed")
-    })
-}
-
 function registrationPopUp(){
     const header = document.querySelector(".header")
     const body = document.querySelector("body")
@@ -162,7 +125,6 @@ function contactUsPopUp() {
 
 contactUsPopUp()
 mobileMenuPopUp()
-loginPopUp()
 registrationPopUp()
 registrationStatusList()
 
