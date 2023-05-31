@@ -1,4 +1,4 @@
-@media only screen and (max-width:1025px){
+@media only screen and (max-width:1023px){
     ._container {
         max-width: 720px;
         padding: 0 16px;
@@ -112,6 +112,10 @@
         margin-bottom: 80px;
     }
 
+    .steps-row {
+        margin-bottom: 80px;
+    }
+
     #grass-right {
         display: none;
     }
@@ -136,6 +140,24 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
+    }
+
+    .contacts__title {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .contacts__info {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 32px;
+    }
+
+    .contacts__info:after {
+        height: 22px;
+        right: -10px;
+        top: calc(100% - 20px);
     }
 
 
@@ -187,12 +209,6 @@
     }
 
     .description-cards {
-        /* flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        row-gap: 20px;
-        gap: 20px; */
-
         display: grid;
         grid-template-columns: 350px 350px;
         grid-template-rows: 1fr 1fr;
@@ -386,6 +402,10 @@
         width: 130px;
     }
 
+    .header-buttons {
+        display: none;
+    }
+
     #wave1 {
         width: 36px;
         height: 41px;
@@ -467,13 +487,12 @@
     .hero-content p {
         max-width: 343px;
         margin-bottom:24px;
-        /* max-width: 343px; */
         text-align: center;
     }
 
     /* STEPS */
     .steps {
-        margin-bottom: 68px;
+        margin-bottom: 60px;
     }
 
     .steps-card {
@@ -484,6 +503,7 @@
         flex-direction: column;
         align-items: center;
         gap: 16px;
+        margin-bottom: 60px;
     }
 
     .description-title-holder h2 {
@@ -493,6 +513,28 @@
 
     #arrow-red {
         display: none;
+    }
+
+    .contacts__title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .contacts__info:after {
+        content: none;
+    }
+
+    .contacts__list-links {
+        gap: 8px;
+    }
+
+    .contacts__link {
+        padding: 14px 20px;
+    }
+
+    .contacts__info {
+        margin-bottom: 24px;
     }
 
 
