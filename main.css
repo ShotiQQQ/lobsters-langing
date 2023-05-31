@@ -121,14 +121,18 @@ ul, ol {
 
 .header-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.header-logo {
+    flex-shrink: 0;
+    margin-right: 68px;
 }
 
 .nav {
     display: flex;
-    column-gap: 52px;
     align-items: center;
+    margin-left: auto;
 }
 
 .nav-list {
@@ -179,6 +183,38 @@ ul, ol {
 .header-button:hover {
     background-color: #E30029;
     color: #F6F7F8;
+}
+
+.header-button_rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #C9C9C9;
+    border-radius: 100px;
+    transition: background-color .3s ease;
+}
+
+.header-button_rounded svg {
+    width: 24px;
+    height: 24px;
+}
+
+.header-button_rounded svg path {
+    transition: fill .3s ease, stroke .3s ease;
+}
+
+.header-button_rounded:hover {
+    background-color: #E30029;
+}
+
+.header-button_rounded_tg:hover svg path {
+    fill: #FFF;
+}
+
+.header-button_rounded_email:hover svg path {
+    stroke: #FFF;
 }
 
 /* ----- HERO ----- */
@@ -320,6 +356,7 @@ ul, ol {
     display: flex;
     column-gap: 20px;
     position: relative;
+    margin-bottom: 140px;
 }
 
 #grass-right {
@@ -360,6 +397,88 @@ ul, ol {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 958px;
+    margin: 0 auto;
+}
+
+.contacts__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.contacts__info {
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.contacts__info:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 167px;
+    right: 17px;
+    height: 27px;
+    background-image: url("assets/decor_elements/contacts_yellow.svg");
+    background-size: 100% 100%;
+}
+
+.contacts__list-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    min-width: 150px;
+    padding: 14px 26px;
+    background-color: #E30029;
+    border-radius: 100px;
+    border: 1px solid #E30029;
+    color: #FFF;
+    transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+}
+
+.contacts__link:hover {
+    color: #000;
+    background-color: transparent;
+    border-color: #C9C9C9;
+}
+
+.contacts__link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contacts__link svg path {
+    transition: fill .3s ease, stroke .3s ease;
+}
+
+.contacts__link_tg:hover svg path {
+    fill: #000;
+}
+
+.contacts__link_email:hover svg path {
+    stroke: #000;
 }
 
 /* ----- DESCRIPTION ----- */
@@ -1359,6 +1478,7 @@ ul, ol {
 .mobile-menu-nav a{
     color: #000;
     text-decoration: none;
+    transition: color .3s ease;
 }
 
 .mobile-menu-nav a:hover {
@@ -1374,6 +1494,21 @@ ul, ol {
 
 .mobile-menu-buttons a {
     text-align: center;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.mobile-menu-buttons button {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.mobile-menu-buttons a:hover {
+    background-color: #E30029;
+    color: #FFF;
+}
+
+.mobile-menu-buttons button:hover {
+    background-color: #E30029;
+    color: #FFF;
 }
 
 .header-button {
@@ -1716,7 +1851,7 @@ ul, ol {
     line-height: 22px;
 }
 
-.registration-popup-dropdown-button div {
+.registration-popup-dropdown-button span {
     height: 11px;
     width: 11px;
     border-top: 1px solid;

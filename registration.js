@@ -7,7 +7,13 @@ const statuses = form.querySelectorAll('[name="status"]');
 const errorStatuses = form.querySelector('.error-status');
 const telephoneInput = form.querySelector('#phone');
 const errorTelephoneInput = form.querySelector('.error-tel');
-const { MaskInput } = Maska;
+
+try {
+  const { MaskInput } = Maska;
+  const mask = new MaskInput("[data-maska]");
+} catch (error) {
+  console.log(error.message);
+}
 
 form.addEventListener('submit', form => {
   form.preventDefault();
@@ -103,5 +109,3 @@ preventDefaultAllButtonsInFormRegistration('.registration-popup-dropdown-button'
 preventDefaultAllButtonsInFormRegistration('#status-list-close-button');
 preventDefaultAllButtonsInFormRegistration('#registration-popup-close');
 validationForm();
-
-const mask = new MaskInput("[data-maska]");
