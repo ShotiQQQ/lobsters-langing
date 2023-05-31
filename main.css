@@ -31,6 +31,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -1116,6 +1117,10 @@ ul, ol {
     position: relative;
 }
 
+.reviews .reviews-card {
+    cursor: pointer;
+}
+
 #decor-pink {
     position: absolute;
     top: -60px;
@@ -2149,4 +2154,80 @@ ul, ol {
     font-weight: 500;
     font-size: 14px;
     text-decoration: underline;
+}
+
+.reviews-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 10;
+    padding: 24px;
+}
+
+.reviews-popup_active {
+    display: block;
+}
+
+.reviews-popup__wrapper {
+    position: relative;
+    max-width: 590px;
+    padding: 24px 24px 80px 24px;
+    background-color: #FFF;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.reviews-popup .reviews-card-bottom-content {
+    overflow: inherit;
+    text-overflow: inherit;
+    -moz-box-orient: inherit;
+    display: block;
+    -webkit-line-clamp: inherit;
+     -webkit-box-orient: inherit;
+    line-clamp: inherit;
+    box-orient: inherit;
+}
+
+.reviews-popup .reviews-card {
+    background-color: transparent;
+    padding: 0;
+}
+
+.reviews-popup .reviews-slider-buttons {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+}
+
+.reviews-popup .slider-button {
+    flex-shrink: 0;
+}
+
+.reviews-popup #popup-reviews-prev-button span {
+    transform: rotate(-45deg) translateY(-6px) translateX(2px)
+}
+
+.reviews-popup #popup-reviews-next-button span {
+    transform: rotate(130deg) translateY(10px) translateX(1px);
+}
+
+.reviews-popup-pagination {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    position: static;
+    min-width: 32px;
+}
+
+.reviews-popup .review-buttons-holder {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
