@@ -25,7 +25,7 @@
                 </a>
 
                 <ul class="header-nav-links nav-list">
-                    <li class="nav-item" id="first-link-tablet"><a href="index.html">Веб-мастер</a></li>
+                    <li class="nav-item" id="first-link-tablet"><a href="index.html">Блогер</a></li>
                     <li class="nav-item"><a href="advertiser.html">Рекламодатель</a></li>
                 </ul>
 
@@ -839,7 +839,7 @@
 
                         <ul class="footer-column-links">
                             <li>
-                                <a class="footer-column-link" href="index.html">Вебмастер</a>
+                                <a class="footer-column-link" href="index.html">Блогер</a>
                             </li>
                             <li>
                                 <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
@@ -877,7 +877,7 @@
                <button class="close" id="mobile-menu-close"></button>
            </div>
            <nav class="mobile-menu-nav">
-               <a href="index.html">Веб-мастер</a>
+               <a href="index.html">Блогер</a>
                <a href="advertiser.html">Рекламодатель</a>
            </nav>
        </div>
@@ -894,65 +894,87 @@
             <button class="close" id="registration-popup-close"></button>
         </div>
 
-        <p class="login-popup-warning">
-            Внимание! Указывайте только корректные контактные данные. Если мы не сможем связаться с вами, вы не получите доступ к личному кабинету
-        </p>
+       <div class="registration-popup-content">
 
-        <form class="registration-popup-form">
+           <!--<div class="registration-popup-success">
 
-            <label for="name">ФИО</label>
-            <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" required/>
+               <div class="registration-popup-success__img"></div>
 
-            <div class="reg-form">
-                <label for="email">E-mail</label>
-                <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" required data-validate="regInput"/>
-                <span hidden class="error error-email" data-validate="regError">Неверный формат e-mail</span>
-            </div>
+               <span class="registration-popup-success__title">Регистрация прошла успешно!</span>
 
-            <div class="reg-form">
-                <label for="media-link">Телеграм / whats app</label>
-                <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" required data-validate="regInput"/>
-                <span hidden class="error error-link" data-validate="regError">Неверный формат ссылки</span>
-            </div>
+               <button class="registration-popup-success__button">Продолжить</button>
 
-            <div class="reg-form">
-                <label for="phone">Телефон</label>
-                <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон" required data-validate="regInput">
-                <span hidden class="error error-tel" data-validate="regError">Неверный формат номера телефона</span>
-            </div>
+           </div>-->
 
-            <label for="platform">Площадка</label>
-            <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" required/>
 
-            <div class="registration-drop-down-holder">
-                <button class="registration-popup-dropdown-button">Ваш статус <span></span></button>
-                <ul class="status-list hidden">
-                    <li class="status-list-item">
-                        <input type="radio" name="status" id="fiz">
-                        <label for="fiz">Физ. лицо, самозанятость</label>
-                    </li>
+           <p class="login-popup-warning">
+               Внимание! Указывайте только корректные контактные данные. Если мы не сможем связаться с вами, вы не получите доступ к личному кабинету
+           </p>
 
-                    <li class="status-list-item">
-                        <input type="radio" name="status" id="ip">
-                        <label for="ip">ИП</label>
-                    </li>
-                    <li class="status-list-item">
-                        <input type="radio" name="status" id="urlico">
-                        <label for="urlico">Юридическое лицо</label>
-                    </li>
+           <form class="registration-popup-form">
 
-                    <button class="close" id="status-list-close-button"></button>
-                </ul>
-                <span hidden class="error error-status" data-validate="regError">Необходимо выбрать один из вариантов статуса</span>
-            </div>
+               <div class="reg-form">
+                   <label for="name">ФИО</label>
+                   <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" data-validate="regInput"/>
+                   <span hidden class="error error-name" data-validate="regError"></span>
+               </div>
 
-            <div class="agreement-checkbox">
-                <input type="checkbox" id="agreement" name="agreement" required>
-                <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
-            </div>
+               <div class="reg-form">
+                   <label for="email">E-mail</label>
+                   <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" data-validate="regInput"/>
+                   <span hidden class="error error-email" data-validate="regError"></span>
+               </div>
 
-            <button class="registration-popup-submit-button" id="registration">Оставить заявку</button>
-        </form>
+               <div class="reg-form">
+                   <label for="media-link">Телеграм / whats app</label>
+                   <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" data-validate="regInput"/>
+                   <span hidden class="error error-link" data-validate="regError"></span>
+               </div>
+
+               <div class="reg-form">
+                   <label for="phone">Телефон</label>
+                   <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон" data-validate="regInput">
+                   <span hidden class="error error-tel" data-validate="regError"></span>
+               </div>
+
+               <div class="reg-form">
+                   <label for="platform">Площадка</label>
+                   <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" data-validate="regInput"/>
+                   <span hidden class="error error-platform" data-validate="regError"></span>
+               </div>
+
+               <div class="registration-drop-down-holder">
+                   <button class="registration-popup-dropdown-button">Ваш статус <span></span></button>
+                   <ul class="status-list hidden">
+                       <li class="status-list-item">
+                           <input type="radio" name="status" id="fiz">
+                           <label for="fiz">Физ. лицо, самозанятость</label>
+                       </li>
+
+                       <li class="status-list-item">
+                           <input type="radio" name="status" id="ip">
+                           <label for="ip">ИП</label>
+                       </li>
+                       <li class="status-list-item">
+                           <input type="radio" name="status" id="urlico">
+                           <label for="urlico">Юридическое лицо</label>
+                       </li>
+
+                       <button class="close" id="status-list-close-button"></button>
+                   </ul>
+                   <span hidden class="error error-status" data-validate="regError"></span>
+               </div>
+
+               <div class="agreement-checkbox">
+                   <input type="checkbox" id="agreement" name="agreement" required>
+                   <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
+               </div>
+
+               <button class="registration-popup-submit-button" id="registration">Оставить заявку</button>
+           </form>
+
+       </div>
+
    </div>
 
     <script src="main.js"></script>
