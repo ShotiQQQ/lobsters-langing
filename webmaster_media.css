@@ -980,6 +980,14 @@
         line-height: 15px;
     }
 
+    .reviews-popup__wrapper {
+        padding-bottom: 50px;
+    }
+
+    .reviews-popup .reviews-slider-buttons {
+        bottom: 10px;
+    }
+
     /* HERO BOTTOM */
     #bottom-hero {
         margin-top: 0;
