@@ -902,10 +902,10 @@ ul, ol {
 }
 
 .video-holder {
+    aspect-ratio: 16 / 9;
     position: relative;
     width: 100%;
     max-width: 590px;
-    height: 336px;
     cursor: pointer;
     background-image: url("assets/images/video-back.webp");
     background-size: 100% 100%;
@@ -987,6 +987,7 @@ ul, ol {
     border-top: 1px solid;
     border-left: 1px solid;
     transition: color .3s ease;
+    color: #000;
 }
 
 .slider-button:hover span {
@@ -2180,6 +2181,13 @@ ul, ol {
     padding: 24px 24px 80px 24px;
     background-color: #FFF;
     border-radius: 10px;
+    max-height: 90vh;
+}
+
+@supports (min-height: 90dvh) {
+    .reviews-popup__wrapper {
+        max-height: 90dvh;
+    }
 }
 
 .reviews-popup .reviews-card-bottom-content {
