@@ -99,7 +99,6 @@ const addListenerReviews = (swiper) => {
             } else {
                 document.body.style.overflow = 'hidden';
                 document.querySelector('html').style.overflow = 'hidden';
-                /*document.style.overflow = 'hidden';*/
                 popup.classList.add('reviews-popup_active');
                 popup.addEventListener('click', popup => {
                     if (popup.target.classList.contains('reviews-popup_active')) {

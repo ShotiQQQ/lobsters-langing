@@ -1118,38 +1118,40 @@
 
            <form class="registration-popup-form">
 
-               <div class="reg-form">
+               <div class="reg-form" data-validate="regFormBlock">
                    <label for="name">ФИО</label>
                    <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" data-validate="regInput"/>
-                   <span hidden class="error error-name" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
                </div>
 
-               <div class="reg-form">
+               <div class="reg-form" data-validate="regFormBlock">
                    <label for="email">E-mail</label>
                    <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" data-validate="regInput"/>
-                   <span hidden class="error error-email" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
+                   <span hidden class="error error-email" data-validate="regError">Неверный формат e-mail</span>
                </div>
 
-               <div class="reg-form">
+               <div class="reg-form" data-validate="regFormBlock">
                    <label for="media-link">Телеграм / whats app</label>
                    <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" data-validate="regInput"/>
-                   <span hidden class="error error-link" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
                </div>
 
-               <div class="reg-form">
+               <div class="reg-form" data-validate="regFormBlock">
                    <label for="phone">Телефон</label>
                    <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон" data-validate="regInput">
-                   <span hidden class="error error-tel" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
+                   <span hidden class="error error-tel" data-validate="regError">Недостаточно символов</span>
                </div>
 
-               <div class="reg-form">
+               <div class="reg-form" data-validate="regFormBlock">
                    <label for="platform">Площадка</label>
                    <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" data-validate="regInput"/>
-                   <span hidden class="error error-platform" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
                </div>
 
-               <div class="registration-drop-down-holder">
-                   <button class="registration-popup-dropdown-button">Ваш статус <span></span></button>
+               <div class="registration-drop-down-holder" data-validate="regFormBlock">
+                   <button class="registration-popup-dropdown-button">Ваш статус<span></span></button>
                    <ul class="status-list hidden">
                        <li class="status-list-item">
                            <input type="radio" name="status" id="fiz">
@@ -1167,11 +1169,11 @@
 
                        <button class="close" id="status-list-close-button"></button>
                    </ul>
-                   <span hidden class="error error-status" data-validate="regError"></span>
+                   <span hidden class="error" data-validate="regErrorRequired">Необходимо выбрать одиз из вариантов</span>
                </div>
 
-               <div class="agreement-checkbox">
-                   <input type="checkbox" id="agreement" name="agreement" required>
+               <div class="agreement-checkbox" data-validate="regFormBlock">
+                   <input type="checkbox" id="agreement" name="agreement" required data-validate="regInput">
                    <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
                </div>
 
