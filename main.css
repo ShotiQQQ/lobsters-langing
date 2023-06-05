@@ -2169,7 +2169,9 @@ ul, ol {
 }
 
 .reviews-popup_active {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .reviews-popup__wrapper {
@@ -2177,7 +2179,6 @@ ul, ol {
     max-width: 590px;
     padding: 24px 24px 80px 24px;
     background-color: #FFF;
-    margin: 0 auto;
     border-radius: 10px;
 }
 
@@ -2190,6 +2191,8 @@ ul, ol {
      -webkit-box-orient: inherit;
     line-clamp: inherit;
     box-orient: inherit;
+    max-height: 348px;
+    overflow-y: auto;
 }
 
 .reviews-popup .reviews-card {

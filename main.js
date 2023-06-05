@@ -97,9 +97,14 @@ const addListenerReviews = (swiper) => {
             if (event.target.classList.contains('reviews-card-company')) {
                 return null;
             } else {
+                document.body.style.overflow = 'hidden';
+                document.querySelector('html').style.overflow = 'hidden';
+                /*document.style.overflow = 'hidden';*/
                 popup.classList.add('reviews-popup_active');
                 popup.addEventListener('click', popup => {
                     if (popup.target.classList.contains('reviews-popup_active')) {
+                        document.body.style.overflow = '';
+                        document.querySelector('html').style.overflow = '';
                         popup.target.classList.remove('reviews-popup_active');
                     }
                 })
