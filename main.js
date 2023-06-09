@@ -57,7 +57,7 @@ const reviewSwiper = new Swiper('.reviews-swiper', {
         },
 
         760: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             spaceBetween: 20
         },
 
