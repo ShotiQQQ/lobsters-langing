@@ -994,6 +994,10 @@ ul, ol {
     color: #FFF;
 }
 
+.swiper-button-disabled span {
+    color: #C9C9C9;
+}
+
 .swiper-button-disabled:hover span {
     color: #C9C9C9;
 }
@@ -1044,7 +1048,7 @@ ul, ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    gap: 14px;
     margin-bottom: 6px;
 }
 
@@ -1090,6 +1094,12 @@ ul, ol {
 }
 
 .list-of-cases__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.list-of-cases__item img {
     width: 36px;
     height: 36px;
 }
@@ -1098,7 +1108,7 @@ ul, ol {
     margin-bottom: 20px;
 }
 
-.other-cases-card-title-text {
+.other-cases-card-title {
     margin-bottom: 20px;
 }
 

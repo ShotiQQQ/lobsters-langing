@@ -965,7 +965,7 @@
         display: flex;
     }
 
-    .reviews-card-company {
+    .reviews-popup .reviews-card-company {
         text-align:inherit;
         gap: 4px;
     }
