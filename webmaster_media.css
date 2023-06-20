@@ -1072,6 +1072,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         max-width: 311px;
+        height: 39px;
     }
 
     .registration-popup-form input::placeholder {

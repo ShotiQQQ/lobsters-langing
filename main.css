@@ -1763,10 +1763,34 @@ ul, ol {
 }
 
 .registration-popup-success {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+}
+
+.registration-popup-success--active {
+    display: flex;
+}
+
+.loader {
+    display: none;
+    width: 40px;
+}
+
+.loader--active svg, .loader--active img {
+    max-width: 100%;
+    max-height: 100%;
+    animation: spin 3s linear infinite;
+}
+
+.loader--active {
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .registration-popup-success__img {
@@ -1814,6 +1838,10 @@ ul, ol {
     flex-direction: column;
 }
 
+.registration-popup-form--inactive {
+    display: none;
+}
+
 .registration-popup-form input {
     position: relative;
     background: #EEE;
@@ -1841,13 +1869,11 @@ ul, ol {
     font-size: 11px;
 }
 
-.registration-popup-form .error-input {
-    border-color: #FF002E;
+.just-validate-error-label {
+    font-size: 12px;
 }
 
-.registration-popup-form .error-input:focus {
-    border-color: #FF002E;
-}
+
 
 .registration-popup-form input::placeholder {
     font-weight: 500;
@@ -1865,6 +1891,14 @@ ul, ol {
     font-size: 12px;
     line-height: 15px;
     padding-bottom: 6px;
+}
+
+.reg-form .just-validate-error-field {
+    border-color: #FF002E;
+}
+
+.reg-form .just-validate-error-field:focus {
+    border-color: #FF002E;
 }
 
 .registration-popup-dropdown-button {
@@ -1929,12 +1963,20 @@ ul, ol {
 
 .agreement-checkbox {
     display: flex;
-    gap: 8px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.agreement-checkbox .just-validate-error-label {
+    width: 100%;
 }
 
 .registration-popup-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 30px;
+    height: 45px;
 }
 
 .agreement-checkbox a{

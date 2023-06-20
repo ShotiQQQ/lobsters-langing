@@ -1,11 +1,19 @@
-const form = document.querySelector('.registration-popup-form');
+const popup = document.querySelector('.registration-popup');
+const form = popup.querySelector('.registration-popup-form');
+const nameInput = form.querySelector('#name');
 const emailInput = form.querySelector('#email');
-const errorEmailInput = form.querySelector('.error-email');
-const errorStatuses = form.querySelector('.error-status');
+const contactsInput = form.querySelector('#media-link');
 const telephoneInput = form.querySelector('#phone');
-const errorTelephoneInput = form.querySelector('.error-tel');
+const aboutInput = form.querySelector('#platform');
+const statusSelect = form.querySelector('.registration-drop-down-holder');
+const checkboxInput = form.querySelector('#agreement');
+const sendButton = form.querySelector('.registration-popup-submit-button');
 
-const regContent = document.querySelector('.registration-popup-content');
+const warningText = document.querySelector('.login-popup-warning');
+const successRegBlock = document.querySelector('.registration-popup-success');
+const successButton = document.querySelector('.registration-popup-success__button');
+
+const params = new URLSearchParams();
 
 try {
   const { MaskInput } = Maska;
@@ -14,143 +22,117 @@ try {
   console.error(error.message)
 }
 
-emailInput.addEventListener('input', event => {
-
-    if (!(event.target.value.endsWith('.com') || event.target.value.endsWith('.ru') || event.target.value.endsWith('.info') || event.target.value.endsWith('.biz') || event.target.value.endsWith('.uk') || event.target.value.endsWith('.uk') || event.target.value.endsWith('.ua') || event.target.value.endsWith('.kz') || event.target.value.endsWith('.uz') || event.target.value.endsWith('.by')) || !(event.target.value.includes('@')) ) {
-      event.target.classList.add('error-input');
-      errorEmailInput.hidden = false;
-    } else {
-      event.target.classList.remove('error-input');
-      errorEmailInput.hidden = true;
-    }
-
-})
-
-telephoneInput.addEventListener('input', event => {
-
-  if (event.target.value.length < 16) {
-    event.target.classList.add('error-input');
-    errorTelephoneInput.hidden = false;
-  }
-  else {
-    event.target.classList.remove('error-input');
-    errorTelephoneInput.hidden = true;
-  }
-
-})
-
-form.addEventListener('submit', form => {
-  form.preventDefault();
+const validator = new window.JustValidate(form, {
+  validateBeforeSubmitting: true,
+  errorLabelStyle: {
+    color: '#FF002E',
+  },
 });
 
-form.querySelector('#registration').addEventListener('click', registrationButton => {
-  validationForm();
-})
+validator
+  .addField(nameInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    }
+  ])
+  .addField(emailInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Неверный формат E-mail',
+    }
+  ])
+  .addField(contactsInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    }
+  ])
+  .addField(telephoneInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    },
+    {
+      rule: 'minLength',
+      value: 16,
+      errorMessage: 'Недостаточно символов',
+    }
+  ])
+  .addField(aboutInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    }
+  ])
+  .addRequiredGroup(statusSelect, 'Необходимо выбрать 1 из вариантов')
+  .addField(checkboxInput, [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения',
+    }
+  ])
+  .onSuccess(event => {
+    const getMetaData = () => {
 
-const validationForm = () => {
+      const data = {}
 
-  form.querySelectorAll('[data-validate="regFormBlock"]').forEach((regFormBlock) => {
-
-    if (regFormBlock.classList.contains('agreement-checkbox')) {
-
-      if (!regFormBlock.querySelector('[data-validate="regInput"]').checked) {
-        console.error('checkbox does not checked')
-        return null
+      for (let [key, value] of params.entries()) {
+        data[key] = value;
       }
 
-    } else if (regFormBlock.classList.contains('registration-drop-down-holder')) {
-
-      const errorStatus = regFormBlock.querySelector('[data-validate="regErrorRequired"]');
-
-      errorStatus.hidden = true;
-
-      const statuses = regFormBlock.querySelectorAll('[name="status"]');
-
-      statuses.forEach(status => {
-
-        status.addEventListener('input', () => {
-
-          if (status.checked) {
-            errorStatus.hidden = true;
-          }
-
-        })
-
-      })
-
-      let statusIsChecked = false;
-
-      for (let status of statuses) {
-        if (status.checked) {
-          statusIsChecked = true;
-          break
-        }
-      }
-
-      if (!statusIsChecked) {
-        errorStatus.hidden = false;
-      }
-
-    } else {
-
-      const input = regFormBlock.querySelector('[data-validate="regInput"]');
-      const errorRequired = regFormBlock.querySelector('[data-validate="regErrorRequired"]');
-
-      if (input.value.length < 1) {
-        errorRequired.hidden = false;
-        input.classList.add('error-input');
-
-        input.addEventListener('input', event => {
-          if (input.id === 'phone') {
-
-            if (event.target.value.length < 16) {
-              event.target.classList.add('error-input');
-              errorTelephoneInput.hidden = false;
-              errorRequired.hidden = true;
-            }
-            else {
-              event.target.classList.remove('error-input');
-              errorTelephoneInput.hidden = true;
-              errorRequired.hidden = true;
-            }
-
-          } else if (input.id === 'email') {
-
-            if (!(event.target.value.endsWith('.com') || event.target.value.endsWith('.ru') || event.target.value.endsWith('.info') || event.target.value.endsWith('.biz') || event.target.value.endsWith('.uk') || event.target.value.endsWith('.uk') || event.target.value.endsWith('.ua') || event.target.value.endsWith('.kz') || event.target.value.endsWith('.uz') || event.target.value.endsWith('.by')) || !(event.target.value.includes('@')) ) {
-              event.target.classList.add('error-input');
-              errorEmailInput.hidden = false;
-              errorRequired.hidden = true;
-            } else {
-              event.target.classList.remove('error-input');
-              errorEmailInput.hidden = true;
-              errorRequired.hidden = true;
-            }
-
-          } else if (event.target.value.length > 0) {
-            errorRequired.hidden = true;
-            input.classList.remove('error-input');
-          }
-        })
-
-      } else {
-        errorRequired.hidden = true;
-        input.classList.remove('error-input');
-      }
-
+      return data
     }
 
+    sendButton.disabled = true;
+    sendButton.querySelector('.registration-popup-submit-button__text').hidden = true;
+    sendButton.querySelector('.loader').classList.add('loader--active');
 
+    const userData = {
+      name: nameInput.value,
+      email: emailInput.value,
+      contact_details: contactsInput.value,
+      phone_number: telephoneInput.value,
+      about: aboutInput.value,
+      type: function checkSelect() {
+        let dataOfSelect = null;
+
+        statusSelect.querySelectorAll('input[name="status"]').forEach(item => {
+          if (item.checked) {
+            dataOfSelect = item.value;
+          }
+        })
+
+        return dataOfSelect;
+
+      },
+      meta: getMetaData()
+    };
+
+    fetch('https://lbstrs.ru/api/requests', {
+      method: 'POST',
+      body: JSON.stringify(userData),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then(() => {
+        console.log('Запрос отправлен');
+        console.log(userData)
+        warningText.hidden = true;
+        form.classList.add('registration-popup-form--inactive');
+        successRegBlock.classList.add('registration-popup-success--active');
+        successButton.addEventListener('click', () => {
+          popup.classList.remove('shown');
+          popup.classList.add('hidden');
+          document.body.classList.remove('body-active-pop-up');
+          document.querySelector('.header').classList.remove('header-popup-active');
+          document.querySelector('.hero').classList.remove('hero-pop-up-displayed');
+        })
+      })
 
   })
-
-}
-
-const preventDefaultAllButtonsInFormRegistration = (selector) => {
-  document.querySelector(selector).addEventListener('click', e => {
-    e.preventDefault();
-  })
-}
-
-preventDefaultAllButtonsInFormRegistration('.registration-popup-dropdown-button');
-preventDefaultAllButtonsInFormRegistration('#status-list-close-button');
-preventDefaultAllButtonsInFormRegistration('#registration-popup-close');

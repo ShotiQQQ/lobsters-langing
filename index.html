@@ -6,6 +6,7 @@
     <meta name="Lobsters" content="Lobsters Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/maska@2/dist/maska.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script defer src="registration.js"></script>
@@ -682,7 +683,7 @@
                         </div>
 
                         <p class="reviews-card-bottom-content">
-                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется в сразу, а большая часть денег уже приходит через две недели.
+                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется сразу, а большая часть денег уже приходит через две недели.
                             Выплаты в Lobsters тоже весьма частые – раз в неделю.
                         </p>
 
@@ -944,7 +945,7 @@
                         </div>
 
                         <p class="reviews-card-bottom-content">
-                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется в сразу, а большая часть денег уже приходит через две недели.
+                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется сразу, а большая часть денег уже приходит через две недели.
                             Выплаты в Lobsters тоже весьма частые – раз в неделю.
                         </p>
 
@@ -1105,7 +1106,7 @@
 
        <div class="registration-popup-content">
 
-           <!--<div class="registration-popup-success">
+           <div class="registration-popup-success">
 
                <div class="registration-popup-success__img"></div>
 
@@ -1113,7 +1114,7 @@
 
                <button class="registration-popup-success__button">Продолжить</button>
 
-           </div>-->
+           </div>
 
 
            <p class="login-popup-warning">
@@ -1122,58 +1123,50 @@
 
            <form class="registration-popup-form">
 
-               <div class="reg-form" data-validate="regFormBlock">
+               <div class="reg-form">
                    <label for="name">ФИО</label>
-                   <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" data-validate="regInput"/>
-                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
+                   <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО"/>
                </div>
 
-               <div class="reg-form" data-validate="regFormBlock">
+               <div class="reg-form">
                    <label for="email">E-mail</label>
-                   <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" data-validate="regInput"/>
-                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
-                   <span hidden class="error error-email" data-validate="regError">Неверный формат e-mail</span>
+                   <input type="text" name="email" id="email" autocomplete="email" placeholder="Укажите e-mail"/>
                </div>
 
-               <div class="reg-form" data-validate="regFormBlock">
+               <div class="reg-form">
                    <label for="media-link">Телеграм / whats app</label>
-                   <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" data-validate="regInput"/>
-                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
+                   <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" />
                </div>
 
-               <div class="reg-form" data-validate="regFormBlock">
+               <div class="reg-form">
                    <label for="phone">Телефон</label>
-                   <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон" data-validate="regInput">
-                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
-                   <span hidden class="error error-tel" data-validate="regError">Недостаточно символов</span>
+                   <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон">
                </div>
 
-               <div class="reg-form" data-validate="regFormBlock">
+               <div class="reg-form">
                    <label for="platform">Площадка</label>
-                   <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" data-validate="regInput"/>
-                   <span hidden class="error" data-validate="regErrorRequired">Обязательно для заполнения</span>
+                   <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое"/>
                </div>
 
-               <div class="registration-drop-down-holder" data-validate="regFormBlock">
+               <div class="registration-drop-down-holder">
                    <button class="registration-popup-dropdown-button">Ваш статус<span></span></button>
                    <ul class="status-list hidden">
                        <li class="status-list-item">
-                           <input type="radio" name="status" id="fiz">
+                           <input type="radio" name="status" id="fiz" value="Физ. лицо">
                            <label for="fiz">Физ. лицо, самозанятость</label>
                        </li>
 
                        <li class="status-list-item">
-                           <input type="radio" name="status" id="ip">
+                           <input type="radio" name="status" id="ip" value="ИП">
                            <label for="ip">ИП</label>
                        </li>
                        <li class="status-list-item">
-                           <input type="radio" name="status" id="urlico">
+                           <input type="radio" name="status" id="urlico" value="Юр. лицо">
                            <label for="urlico">Юридическое лицо</label>
                        </li>
 
                        <button class="close" id="status-list-close-button"></button>
                    </ul>
-                   <span hidden class="error" data-validate="regErrorRequired">Необходимо выбрать одиз из вариантов</span>
                </div>
 
                <div class="agreement-checkbox" data-validate="regFormBlock">
@@ -1181,7 +1174,16 @@
                    <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
                </div>
 
-               <button class="registration-popup-submit-button" id="registration">Оставить заявку</button>
+               <button class="registration-popup-submit-button" id="registration">
+                   <span class="loader">
+                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                            <path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                              <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+                            </path>
+                        </svg>
+                   </span>
+                   <span class="registration-popup-submit-button__text">Оставить заявку</span>
+               </button>
            </form>
 
        </div>

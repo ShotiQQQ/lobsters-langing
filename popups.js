@@ -89,12 +89,14 @@ function registrationStatusList() {
     const statusListOpen = document.querySelector(".registration-popup-dropdown-button")
     const statusListClose = document.querySelector("#status-list-close-button")
 
-    statusListOpen.addEventListener('click', function(){
+    statusListOpen.addEventListener('click', function(e){
+        e.preventDefault()
         statusList.classList.remove("hidden")
         statusList.classList.add("shown")
     })
 
-    statusListClose.addEventListener('click', function(){
+    statusListClose.addEventListener('click', function(e){
+        e.preventDefault()
         statusList.classList.remove("shown")
         statusList.classList.add("hidden")
     })
