@@ -116,7 +116,7 @@ validator
     fetch('https://www.lbstrs.ru/api/requests', {
       method: 'POST',
       body: JSON.stringify(userData),
-      mode: 'no-cors',
+      /* mode: 'no-cors', */
       redirect: 'manual',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
