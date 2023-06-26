@@ -113,7 +113,7 @@ validator
       meta: getMetaData()
     };
 
-    fetch('https://lbstrs.ru/api/requests', {
+    fetch('https://www.lbstrs.ru/api/requests', {
       method: 'POST',
       body: JSON.stringify(userData),
       mode: 'no-cors',
@@ -121,9 +121,10 @@ validator
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then(() => {
+      .then((res) => {
         console.log('Запрос отправлен');
         console.log(userData)
+        console.log(res)
         warningText.hidden = true;
         form.classList.add('registration-popup-form--inactive');
         successRegBlock.classList.add('registration-popup-success--active');
