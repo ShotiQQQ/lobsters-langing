@@ -92,40 +92,31 @@ validator
     sendButton.querySelector('.registration-popup-submit-button__text').hidden = true;
     sendButton.querySelector('.loader').classList.add('loader--active');
 
-    const userData = {
-      name: nameInput.value,
-      email: emailInput.value,
-      contact_details: contactsInput.value,
-      phone_number: telephoneInput.value,
-      about: aboutInput.value,
-      type: function checkSelect() {
-        let dataOfSelect = null;
+    const checkSelect = () => {
+      let dataOfSelect = null;
 
-        statusSelect.querySelectorAll('input[name="status"]').forEach(item => {
-          if (item.checked) {
-            dataOfSelect = item.value;
-          }
-        })
+      statusSelect.querySelectorAll('input[name="status"]').forEach(item => {
+        if (item.checked) {
+          dataOfSelect = item.value;
+        }
+      })
+      
+      console.log(dataOfSelect)
+      return dataOfSelect;
 
-        return dataOfSelect;
-
-      },
-      meta: getMetaData()
     };
 
-    fetch('https://www.lbstrs.ru/api/requests', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-      /* mode: 'no-cors', */
-      redirect: 'manual',
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((res) => {
-        console.log('Запрос отправлен');
-        console.log(userData)
-        console.log(res)
+    axios
+      .post('https://www.lbstrs.ru/api/requests', {
+        name: nameInput.value,
+        email: emailInput.value,
+        contact_details: contactsInput.value,
+        phone_number: telephoneInput.value,
+        about: aboutInput.value,
+        type: checkSelect(),
+        meta: getMetaData()
+      })
+      .then(() => {
         warningText.hidden = true;
         form.classList.add('registration-popup-form--inactive');
         successRegBlock.classList.add('registration-popup-success--active');
@@ -137,6 +128,11 @@ validator
           document.querySelector('.hero').classList.remove('hero-pop-up-displayed');
         })
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        alert(error.message)
+        sendButton.disabled = false;
+        sendButton.querySelector('.registration-popup-submit-button__text').hidden = false;
+        sendButton.querySelector('.loader').classList.remove('loader--active');
+      })
 
   })
