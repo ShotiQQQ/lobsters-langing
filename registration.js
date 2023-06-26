@@ -117,6 +117,7 @@ validator
       method: 'POST',
       body: JSON.stringify(userData),
       mode: 'no-cors',
+      redirect: 'follow',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
