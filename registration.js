@@ -117,7 +117,7 @@ validator
       method: 'POST',
       body: JSON.stringify(userData),
       mode: 'no-cors',
-      redirect: 'follow',
+      redirect: 'manual',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -137,5 +137,6 @@ validator
           document.querySelector('.hero').classList.remove('hero-pop-up-displayed');
         })
       })
+      .catch(error => console.log(error))
 
   })
