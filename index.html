@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Lobsters" content="Lobsters Company">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/maska@2/dist/maska.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script defer src="registration.js"></script>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="webmaster_media.css">
     <title>Lobsters</title>
@@ -22,44 +15,25 @@
         <div class="_container">
             <div class="header-nav">
 
-                <a href="index.html" class="header-logo">
-                    <img src="assets/images/logo.svg" width="168" height="26" alt="Логотип компании Lobsters">
+                <a href="index.html" class="lobsters-logo-link">
+                    <img src="assets/images/logo.png" alt="lobsters logo">
                 </a>
-
-                <ul class="header-nav-links nav-list">
-                    <li class="nav-item" id="first-link-tablet"><a href="index.html">Блогер</a></li>
-                    <li class="nav-item"><a href="advertiser.html">Рекламодатель</a></li>
-                </ul>
 
                 <nav class="nav">
 
-                    <ul class="header-buttons">
-                        <li>
-                            <a href="https://t.me/lobsters_support" class="header-button_rounded header-button_rounded_tg" target="_blank">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.2998 2.87446C21.066 2.88472 20.8385 2.94978 20.6332 3.03196C20.4301 3.11359 19.2607 3.61271 17.5339 4.35102C15.807 5.08934 13.5622 6.05078 11.337 7.00415C6.88655 8.91088 2.51324 10.787 2.51324 10.787L2.54511 10.7748C2.54511 10.7748 2.28116 10.863 2.01355 11.0495C1.87974 11.1427 1.73579 11.263 1.61792 11.4385C1.50006 11.614 1.41389 11.8627 1.44636 12.1257C1.56042 13.0496 2.51792 13.3116 2.51792 13.3116L2.52167 13.3135L6.7948 14.776C6.90375 15.1395 8.09085 19.1016 8.35199 19.9407C8.4962 20.4046 8.63119 20.6722 8.77199 20.8548C8.84244 20.9461 8.91628 21.0168 8.99792 21.0685C9.03036 21.0891 9.06448 21.1045 9.09824 21.1182H9.10011C9.10426 21.12 9.10816 21.1202 9.1123 21.122L9.10105 21.1191C9.10889 21.1223 9.11663 21.1276 9.12449 21.1304C9.13972 21.1357 9.14905 21.1356 9.16855 21.1398C9.65793 21.3106 10.0629 20.9935 10.0629 20.9935L10.0798 20.9804L12.7048 18.5457L16.9648 21.8673L17.0182 21.8916C17.7639 22.2227 18.4382 22.038 18.8117 21.7341C19.1851 21.4303 19.332 21.0385 19.332 21.0385L19.3479 20.9973L22.4782 4.68196C22.5583 4.31695 22.5697 4.00144 22.4942 3.71633C22.4186 3.43123 22.2351 3.18339 22.0048 3.04602C21.7745 2.90865 21.5336 2.8642 21.2998 2.87446ZM21.3251 3.8504C21.4201 3.846 21.4904 3.85685 21.5126 3.87008C21.5348 3.88331 21.5447 3.88157 21.566 3.96196C21.5873 4.04234 21.5989 4.21166 21.5407 4.47665L21.5389 4.48227L18.4264 20.7029C18.419 20.7192 18.3541 20.8693 18.206 20.9898C18.055 21.1127 17.887 21.2086 17.441 21.0216L12.7826 17.3888L12.6514 17.2857L12.6485 17.2885L11.2554 16.2432L19.0845 7.03227C19.1446 6.96168 19.1831 6.87517 19.1951 6.78321C19.2071 6.69124 19.1923 6.59776 19.1523 6.51406C19.1123 6.43036 19.049 6.36004 18.9699 6.31158C18.8908 6.26313 18.7994 6.23862 18.7067 6.24102C18.6161 6.24337 18.528 6.27133 18.4526 6.32165L7.12386 13.8741L2.84417 12.4088C2.84417 12.4088 2.4192 12.1723 2.39886 12.0076C2.39773 11.9985 2.39271 12.0067 2.4148 11.9738C2.43688 11.941 2.49239 11.8854 2.56199 11.837C2.70117 11.74 2.86011 11.6813 2.86011 11.6813L2.87605 11.6757L2.89199 11.6691C2.89199 11.6691 7.26553 9.79297 11.7157 7.88633C13.9408 6.93302 16.1852 5.97228 17.9117 5.23415C19.6377 4.4962 20.8848 3.96504 20.9904 3.92258C21.1106 3.87444 21.2302 3.85479 21.3251 3.8504ZM16.1332 9.02165L10.196 16.007L10.1932 16.0098C10.184 16.0209 10.1752 16.0325 10.167 16.0445C10.1576 16.0574 10.1488 16.0709 10.1407 16.0848C10.1074 16.1414 10.086 16.2042 10.0779 16.2695C10.0779 16.2707 10.0779 16.272 10.0779 16.2732L9.30449 19.7513C9.29163 19.7138 9.28262 19.7 9.26886 19.6557V19.6548C9.0232 18.8654 7.90319 15.1287 7.74824 14.612L16.1332 9.02165ZM10.8664 17.1516L11.9332 17.9523L10.3657 19.4054L10.8664 17.1516Z" fill="black"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:account@lobsters.pro" class="header-button_rounded header-button_rounded_email">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M22 6L12 13L2 6" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://stat.thelobsters.ru/login" class="header-button log-in-button">Войти</a>
-                        </li>
-                        <li>
-                            <button class="header-button registration-button">Регистрация</button>
-                        </li>
+                    <ul class="header-nav-links nav-list">
+                        <li class="nav-item" id="first-link-tablet"><a href="index.html">Веб-мастер</a></li>
+                        <li class="nav-item"><a href="advertiser.html">Рекламодатель</a></li>
                     </ul>
+
+                    <div class="header-buttons">
+                        <button class="header-button log-in-button">Войти</button>
+                        <button class="header-button registration-button">Регистрация</button>
+                    </div>
 
                 </nav>
 
-                <button class="header-menu-button"></button>
+                <button class="header-menu-button"><img src="assets/images/mobile_menu_button.svg"></button>
             </div>
         </div>
     </header>
@@ -70,20 +44,17 @@
 
                 <div class="hero-content">
                     <div class="hero-content-title-holder">
-                        <div id="squigly-yellow"></div>
+                        <img src="assets/decor_elements/squigly_yellow.svg" id="squigly-yellow">
                         <h1>Зарабатывайте на<br class="hero-br-desktop"> контенте, <br class="hero-br1"> рекламируя <br class="hero-br-desktop"> крупные бренды</h1>
                     </div>
-                    <p>
-                        Монетизируйте свою аудиторию через платформу Lobsters и получайте
-                        <span class="hero-link">оплату за каждого клиента</span>
-                    </p>
+                    <p>Монетизируйте свою аудиторию через платформу Lobsters и получайте <a href="/" class="hero-link">оплату за каждого клиента</a></p>
                     <button class="hero-button" id="begin-work-button">Начать работу</button>
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <div id="wave1"></div>
-                        <div class="lobster1"></div>
+                        <img src="assets/decor_elements/wave.svg" id="wave1">
+                        <img src="assets/images/lobster.svg" alt="" class="lobster1">
                     </div>
                 </div>
             </div>
@@ -92,60 +63,33 @@
 
     <section class="steps">
         <div class="_container">
-            <ol class="steps-row">
-                <li class="steps-card">
-                    <span class="steps-card-number">01</span>
+            <div class="steps-row">
+                <div class="steps-card">
+                    <img src="assets/card_icons/card_num1.svg" class="steps-card-number">
                     <div class="steps-card-content">
-                        <h3>Выберите бренд</h3>
+                        <h1>Выберите бренд</h1>
                         <p>Работаем только с крупными и надежными брендами, продукты которых нужны миллионам людей</p>
                     </div>
-                </li>
-                <li class="steps-card">
-                    <span class="steps-card-number">02</span>
+                </div>
+                <div class="steps-card">
+                    <img src="assets/card_icons/card_num2.svg" class="steps-card-number">
                     <div class="steps-card-content">
-                        <h3>Разместите рекламу</h3>
+                        <h1>Разместите рекламу</h1>
                         <p>Поделимся с вами примерами успешных публикаций, чтобы вы
                         не тратили свое время</p>
                     </div>
-                </li>
-                <li class="steps-card">
-                    <span class="steps-card-number">03</span>
+                </div>
+                <div class="steps-card">
+                    <img src="assets/card_icons/card_num3.svg" class="steps-card-number">
                     <div class="steps-card-content">
-                        <h3>Получите оплату</h3>
+                        <h1>Получите оплату</h1>
                         <p>Оплачиваем каждого клиента
                         и не ограничиваем доход с одной
                         публикации</p>
                     </div>
-                </li>
-            </ol>
-            <div id="grass-right"></div>
-
-            <div class="contacts">
-                <h2 class="contacts__title">Связаться с нами</h2>
-                <p class="contacts__info">
-                    Мы здесь, чтобы помочь! Поможем подобрать бренд и формат поста для рекламы, чтобы заработать больше!
-                </p>
-                <ul class="contacts__list-links">
-                    <li class="contacts__item-link">
-                        <a href="https://t.me/lobsters_support" class="contacts__link contacts__link_tg" target="_blank">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.2998 2.87446C21.066 2.88472 20.8385 2.94978 20.6332 3.03196C20.4301 3.11359 19.2607 3.61271 17.5339 4.35102C15.807 5.08934 13.5622 6.05078 11.337 7.00415C6.88655 8.91088 2.51324 10.787 2.51324 10.787L2.54511 10.7748C2.54511 10.7748 2.28116 10.863 2.01355 11.0495C1.87974 11.1427 1.73579 11.263 1.61792 11.4385C1.50006 11.614 1.41389 11.8627 1.44636 12.1257C1.56042 13.0496 2.51792 13.3116 2.51792 13.3116L2.52167 13.3135L6.7948 14.776C6.90375 15.1395 8.09085 19.1016 8.35199 19.9407C8.4962 20.4046 8.63119 20.6722 8.77199 20.8548C8.84244 20.9461 8.91628 21.0168 8.99792 21.0685C9.03036 21.0891 9.06448 21.1045 9.09824 21.1182H9.10011C9.10426 21.12 9.10816 21.1202 9.1123 21.122L9.10105 21.1191C9.10889 21.1223 9.11663 21.1276 9.12449 21.1304C9.13972 21.1357 9.14905 21.1356 9.16855 21.1398C9.65793 21.3106 10.0629 20.9935 10.0629 20.9935L10.0798 20.9804L12.7048 18.5457L16.9648 21.8673L17.0182 21.8916C17.7639 22.2227 18.4382 22.038 18.8117 21.7341C19.1851 21.4303 19.332 21.0385 19.332 21.0385L19.3479 20.9973L22.4782 4.68196C22.5583 4.31695 22.5697 4.00144 22.4942 3.71633C22.4186 3.43123 22.2351 3.18339 22.0048 3.04602C21.7745 2.90865 21.5336 2.8642 21.2998 2.87446ZM21.3251 3.8504C21.4201 3.846 21.4904 3.85685 21.5126 3.87008C21.5348 3.88331 21.5447 3.88157 21.566 3.96196C21.5873 4.04234 21.5989 4.21166 21.5407 4.47665L21.5389 4.48227L18.4264 20.7029C18.419 20.7192 18.3541 20.8693 18.206 20.9898C18.055 21.1127 17.887 21.2086 17.441 21.0216L12.7826 17.3888L12.6514 17.2857L12.6485 17.2885L11.2554 16.2432L19.0845 7.03227C19.1446 6.96168 19.1831 6.87517 19.1951 6.78321C19.2071 6.69124 19.1923 6.59776 19.1523 6.51406C19.1123 6.43036 19.049 6.36004 18.9699 6.31158C18.8908 6.26313 18.7994 6.23862 18.7067 6.24102C18.6161 6.24337 18.528 6.27133 18.4526 6.32165L7.12386 13.8741L2.84417 12.4088C2.84417 12.4088 2.4192 12.1723 2.39886 12.0076C2.39773 11.9985 2.39271 12.0067 2.4148 11.9738C2.43688 11.941 2.49239 11.8854 2.56199 11.837C2.70117 11.74 2.86011 11.6813 2.86011 11.6813L2.87605 11.6757L2.89199 11.6691C2.89199 11.6691 7.26553 9.79297 11.7157 7.88633C13.9408 6.93302 16.1852 5.97228 17.9117 5.23415C19.6377 4.4962 20.8848 3.96504 20.9904 3.92258C21.1106 3.87444 21.2302 3.85479 21.3251 3.8504ZM16.1332 9.02165L10.196 16.007L10.1932 16.0098C10.184 16.0209 10.1752 16.0325 10.167 16.0445C10.1576 16.0574 10.1488 16.0709 10.1407 16.0848C10.1074 16.1414 10.086 16.2042 10.0779 16.2695C10.0779 16.2707 10.0779 16.272 10.0779 16.2732L9.30449 19.7513C9.29163 19.7138 9.28262 19.7 9.26886 19.6557V19.6548C9.0232 18.8654 7.90319 15.1287 7.74824 14.612L16.1332 9.02165ZM10.8664 17.1516L11.9332 17.9523L10.3657 19.4054L10.8664 17.1516Z" fill="#FFF"/>
-                            </svg>
-                            Телеграм
-                        </a>
-                    </li>
-                    <li class="contacts__item-link">
-                        <a href="mailto:account@lobsters.pro" class="contacts__link contacts__link_email">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M22 6L12 13L2 6" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            E-mail
-                        </a>
-                    </li>
-                </ul>
+                </div>
+                <img src="assets/decor_elements/grass_right.svg" id="grass-right">
             </div>
-
         </div>
     </section>
 
@@ -154,60 +98,52 @@
             <div class="description-wrapper">
 
                 <div class="description-title-holder">
-                    <h2>Зарабатывайте больше <br> и проще, чем «за фикс»</h2>
-                    <div id="arrow-black-one"></div>
+                    <h1>Зарабатывайте больше <br> и проще, чем «за фикс»</h1>
+                    <img src="assets/decor_elements/arrow_black1.svg" id="arrow-black-one">
                 </div>
 
-                    <ul class="description-cards">
-                        <li class="description-card">
-                            <div class="description-card-img description-card-img--1"></div>
+                    <div class="description-cards">
+                        <div class="description-card">
+                            <img src="assets/card_icons/atom.svg" alt="">
                             <p>Не нужно ждать и надеяться — крупные бренды уже готовы с вами работать</p>
-                        </li>
-                        <li class="description-card">
-                            <div class="description-card-img description-card-img--2"></div>
+                        </div>
+                        <div class="description-card">
+                            <img src="assets/card_icons/checkmark.svg" alt="">
                             <p>Не нужно подстраиваться — делайте рекламу в своем стиле без жестких брифов </p>
-                        </li>
-                        <li class="description-card">
-                            <div class="description-card-img description-card-img--3"></div>
+                        </div>
+                        <div class="description-card">
+                            <img src="assets/card_icons/bar_chart.svg" alt="">
                             <p>Не нужно постоянно искать спонсоров — бренды хотят работать долгосрочно</p>
-                        </li>
-                        <li class="description-card">
-                            <div class="description-card-img description-card-img--4"></div>
+                        </div>
+                        <div class="description-card">
+                            <img src="assets/card_icons/line_chart.svg" alt="">
                             <p>Не нужно полагаться на удачу — рекламируйте то,что реально приносит $$$</p>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
             </div>
         </div>
-
+        <!-- <img src="assets/decor_elements/decor_purple.svg" id="decor-purple"> -->
     </section>
 
     <section class="brands">
-        <div id="decor-red"></div>
+        <img src="assets/decor_elements/decor_red.svg" id="decor-red">
         <div class="_container">
             <div class="brands-wrapper">
                 <div class="brands-title-holder">
-                    <h2>Эти бренды <span id="brands-title-holder-underlined">уже готовы </span> разместить <br> рекламу у вас в блоге</h2>
+                    <h1>Эти бренды <span id="brands-title-holder-underlined">уже готовы <img src="assets/decor_elements/underline_straight.svg" id="underline-straight"></span> разместить <br> рекламу у вас в блоге</h1>
 
                 </div>
 
-                <ul class="brands-cards">
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--tinkoff"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--alpha"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--urbir"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--mts"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--gazprom"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--renes"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--sovcom"></div>
-                    <li class="brand__card">
-                        <div class="brand__img brand__img--open"></div>
-                </ul>
+                <div class="brands-cards">
+                    <div class="brand__card"><img src="assets/company_logos/tinkoff.svg" alt="tinkoff bank logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/alfa.svg" alt="alpha bank logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/ubrir.svg" alt="ubrir bank logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/mts.svg" alt="mts logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/gazprom.svg" alt="gazprom logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/renessans.svg" alt="renessans bank logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/sovkom.svg" alt="sovkom bank logo"></div>
+                    <div class="brand__card"><img src="assets/company_logos/otkritie.svg" alt="bank otkritie logo"></div>
+                </div>
 
                 <div class="brands-link-holder">
                     <div class="brands-link">
@@ -220,51 +156,51 @@
     </section>
 
     <section class="platforms">
-        <div id="decor_yellow-white"></div>
+        <img src="assets/decor_elements/decor_yellow-white.svg" id="decor_yellow-white">
         <div class="_container">
             <div class="platforms-wrapper">
                 <div class="platforms-title-holder">
-                    <div id="arrow_red"></div>
-                    <h2>Работаем с любой платформой, <br class="platforms-br-desktop"> главное — качество аудитории</h2>
+                    <img src="assets/decor_elements/arrow_red.svg" id="arrow_red">
+                    <h1>Работаем с любой платформой, <br class="platforms-br-desktop"> главное — качество аудитории</h1>
                 </div>
-                <ul class="platforms-icons">
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--1"></div>
+                <div class="platforms-icons">
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/youtube.svg" alt="">
                         <p>YouTube</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--2"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/telegram_platform_icon.svg" alt="">
                         <p>Telegram</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--3"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/desktop_platform_icon.svg" alt="">
                         <p>Сайты / Блоги</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--4"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/tiktok.svg" alt="">
                         <p>Tik Tok</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--5"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/dzen.svg" alt="">
                         <p>Яндекс Дзен</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--6"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/mobile_platforms_icon.svg" alt="">
                         <p>Мобильные <br> приложения</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--7"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/instagram.svg" alt="">
                         <p>Instagram</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--8"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/vk.svg" alt="">
                         <p>Вконтакте</p>
-                    </li>
-                    <li class="platforms-icon">
-                        <div class="platforms-icon-img platforms-icon-img--9"></div>
+                    </div>
+                    <div class="platforms-icon">
+                        <img src="assets/platform_icons/heart_media_icon.svg" alt="">
                         <p>Рассмотрим <br> другие площадки</p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -273,10 +209,10 @@
         <div class="_container">
             <div class="case-wrapper">
                 <div class="case-content">
-                    <div id="grass-left"></div>
-                    <h2 class="case-content-title">С нами реально <br class="case-br-desktop"> зарабатывают</h2>
+                    <img src="assets/decor_elements/grass_left.svg" id="grass-left">
+                    <h1 class="case-content-title">С нами реально <br class="case-br-desktop"> зарабатывают</h1>
                     <div class="case-content-text">
-                        <h3>Кейс: Миллион за 3 дня</h3>
+                        <h1>Кейс: Миллион за 3 дня</h1>
                         <p class="case-content-text-description">Кира Юхтенко, YouTube канал InvestFuture, в одном из выпусков анонсировала акцию “Вечной бесплатное обслуживание Tinkoff Black” и заработала 1 млн+.</p>
                         <p class="case-content-text-duration">Срок проведения акции: 3 дня</p>
                         <p class="case-content-stats">
@@ -287,516 +223,393 @@
                     </div>
                 </div>
 
-                <div class="video-holder">
-
-
-                </div>
-
-                <div id="loop"></div>
+                <div class="video-holder"><iframe width="560" height="315" src="https://www.youtube.com/embed/6DgsVKKCKOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <img src="assets/decor_elements/loop.svg" id="loop"></div>
 
             </div>
         </div>
     </section>
 
     <section class="other-cases">
-        <div id="decor-blue"></div>
+        <img src="assets/decor_elements/decor_blue.svg" id="decor-blue">
         <div class="_container">
             <div class="other-cases-top-wrapper">
-                <h2>Другие кейсы</h2>
+                <h1>Другие кейсы</h1>
                 <div class="other-cases-slider-buttons">
-                    <button class="slider-button" id="other-cases-prev-button"><span></span></button>
-                    <button class="slider-button" id="other-cases-next-button"><span></span></button>
+                    <div class="slider-button" id="other-cases-prev-button"><div></div></div>
+                    <div class="slider-button" id="other-cases-next-button"><div></div></div>
                 </div>
             </div>
         </div>
 
-        <div class="other-cases-slider swiper">
-
-            <ul class="other-cases-cards-slider swiper-wrapper">
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                            <a href="https://www.youtube.com/c/GARAGEBIZ" class="reviews-card-company" target="_blank">GarageBiz</a>
-                        </div>
-                        <span class="other-cases-card-title-text">Реклама, IT, заработок</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/safari.svg" alt="Иконка Safari">
-                                <img src="assets/icons_media/cases_youtube.svg" alt="Иконка Youtube">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Аудитория: 170 000</span>
-                            <span>Начало сотрудничества: июнь 2020</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Средний заработок в месяц (за полгода, ноябрь 22 - апрель 23)</span>
-                        <span id="other-cases-card-highligthed">130 000р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                            <a href="https://nakopi-deneg.ru/" class="reviews-card-company" target="_blank">Накопи Денег</a>
-                        </div>
-                        <span class="other-cases-card-title-text">Банковские продукты</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/safari.svg" alt="Иконка браузера сафари">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Аудитория: 72k визитов в апреле 2023</span>
-                            <span>Начало сотрудничества: ноябрь 2020</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Средний заработок в месяц по карте Tinkoff Platinum (за полгода, ноябрь 22 - апрель 23)</span>
-                        <span id="other-cases-card-highligthed">118 000р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                            <a href="https://vk.com/karto_ved" class="reviews-card-company" target="_blank">КартоВед</a>
-                        </div>
-                            <span class="other-cases-card-title-text">Банковские продукты</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/cases_vk.svg" alt="Иконка Вконтакте">
-                                <img src="assets/icons_media/cases_youtube.svg" alt="Иконка Youtube">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Аудитория: ВК - 720 подписчиков</span>
-                            <span>Youtube - 7 000</span>
-                            <span>Начало сотрудничества: ноябрь 2020</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Средний заработок в месяц (за полгода, ноябрь 22 - апрель 23)</span>
-                        <span id="other-cases-card-highligthed">36 000р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                            <a href="https://t.me/robberoidd" class="reviews-card-company" target="_blank">Грабёж</a>
-                        </div>
-                            <span class="other-cases-card-title-text">Банковские продукты</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Аудитория: 7 700</span>
-                            <span>Начало сотрудничества: декабрь 2022</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Средний заработок в месяц (декабрь 22 - апрель 23)</span>
-                        <span id="other-cases-card-highligthed">58 000р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                            <a href="https://t.me/+wtzumsJiu6tmM2Ji" class="reviews-card-company" target="_blank">
-                                Заяц | Акции | Скидки
-                            </a>
-                        </div>
-                        <span class="other-cases-card-title-text">Скидки и оптовые цены</span>
-                    </div>
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Аудитория: 1 080 000</span>
-                            <span>Начало сотрудничества: май 2022</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Средний заработок в месяц по дебетовой карте Tinkoff Drive:</span>
-                        <span id="other-cases-card-highligthed">350 000р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                        </div>
-                        <span class="other-cases-card-title-text">Банковские продукты</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/safari.svg" alt="Иконка Safari">
-                                <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>Блог: 200 тыс визитов / месяц</span>
-                            <span>ТГ: 10-15 тыс просмотров</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Заработок за 2022</span>
-                        <span id="other-cases-card-highligthed">5 257 610 Р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                        </div>
-                        <span class="other-cases-card-title-text">Банковские продукты</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/cases_dzen.svg" alt="Иконка Яндекс Дзен">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>25 - 50 тысяч дочитываний в месяц</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Заработок за 2022</span>
-                        <span id="other-cases-card-highligthed">5 113 050 Р</span>
-                    </div>
-
-                </li>
-
-                <li class="other-cases-card swiper-slide">
-
-                    <div class="other-cases-card-title">
-                        <div class="other-cases-card-title-top">
-                            <span class="card-gray-title">Тематика</span>
-                        </div>
-                        <span class="other-cases-card-title-text">Скидки, промокоды</span>
-                    </div>
-
-
-                    <div class="other-cases-card-platforms">
-                        <span class="card-gray-title">Площадки</span>
-                        <ul class="list-of-cases">
-                            <li class="list-of-cases__item">
-                                <img src="assets/icons_media/telegram_img.svg" alt="Иконка телеграм">
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="other-cases-card-activity">
-                        <span class="card-gray-title">Активность</span>
-                        <span class="cases-card-stats">
-                            <span>15 - 25 тысяч просмотров</span>
-                        </span>
-                    </div>
-
-
-                    <div class="other-cases-card-revenue">
-                        <span class="card-gray-title">Заработок за 2022</span>
-                        <span id="other-cases-card-highligthed">1 904 650 Р</span>
-                    </div>
-
-                </li>
-
-            </ul>
+        <div class="other-cases-cards-slider">
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Скидки, промокоды</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/telegram_img.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">90 тысяч просмотров</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">8 218 700 Р</p>
+                </div>
+
+            </div>
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Разбор банковских продуктов  </p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/telegram_img.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">10-15 тыс просмотров</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">5 257 610 Р</p>
+                </div>
+
+            </div>
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Выгодные предложения банков (проект Lobsters)</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/dzen_img.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">25 - 50 тысяч дочитываний в месяц</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">5 113 050 Р</p>
+                </div>
+
+            </div>
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Сайт подбора банковских продуктов и займов</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/safari.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">40 тыс визитов / месяц</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">1 963 500 Р</p>
+                </div>
+
+            </div>
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Скидки, промокоды</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/telegram_img.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">15 - 25 тысяч просмотров</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">1 904 650 Р</p>
+                </div>
+
+            </div>
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Блог пользователя банков</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/safari.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">90 тыс визитов / месяц</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">1 726 950 Р</p>
+                </div>
+
+            </div>
+
+            <!-- <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Выгодные предложения банков</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/dzen_img.svg">
+                </div>
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">917 550 Р</p>
+                </div>
+
+            </div> -->
+
+            <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Разбор банковских продуктов</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/safari.svg">
+                </div>
+
+
+                <div class="other-cases-card-activity">
+                    <p class="card-gray-title">Активность</p>
+                    <p class="cases-card-stats">7 тыс просмотров / ролик</p>
+                </div>
+
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">557 700 Р</p>
+                </div>
+
+            </div>
+
+            <!-- <div class="other-cases-card" draggable="false">
+
+                <div class="other-cases-card-title">
+                    <p class="card-gray-title">Тематика</p>
+                    <p class="other-cases-card-title-text">Разбор банковских продуктов</p>
+                </div>
+
+
+                <div class="other-cases-card-platforms">
+                    <p class="card-gray-title">Площадки</p>
+                    <img src="assets/icons_media/safari.svg">
+                </div>
+
+                <div class="other-cases-card-revenue">
+                    <p class="card-gray-title">Заработок за 2022</p>
+                    <p id="other-cases-card-highligthed">435 000 Р</p>
+                </div>
+
+            </div> -->
+
+
 
         </div>
     </section>
 
 
     <section class="reviews">
-        <div id="decor-pink"></div>
+        <img src="assets/decor_elements/decor_pink.svg" id="decor-pink">
 
         <div class="_container">
             <div class="reviews-top-wrapper">
-                <h2>Уже 4 года <br class="reviews-br-1"> <span id="reviews-title-underlined">стараемся</span> для вас</h2>
+                <h1>Уже 4 года <br class="reviews-br-1"> <span id="reviews-title-underlined">стараемся<img src="assets/decor_elements/underline_squigly.svg" id="underline-squigly"></span> для вас</h1>
                 <div class="reviews-slider-buttons">
                     <div class="review-buttons-holder">
-                        <button class="slider-button" id="reviews-prev-button"><span></span></button>
-                        <button class="slider-button" id="reviews-next-button"><span></span></button>
+                        <div class="slider-button" id="reviews-prev-button"><div></div></div>
+                        <div class="slider-button" id="reviews-next-button"><div></div></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="reviews-swiper swiper">
-            <ul class="reviews-cards-slider swiper-wrapper">
+        <div class="reviews-cards-slider">
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="1">
+            <div class="reviews-card" draggable="false">
 
-                    <img src="assets/card_icons/oleg.png" alt="Фотография пользователя Олег">
+                <img src="assets/card_icons/konstantin.svg" alt="">
 
-                    <div class="reviews-card-text">
+                <div class="reviews-card-text">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Олег</p>
-                            <a href="https://www.youtube.com/c/GARAGEBIZ" class="reviews-card-company" target="_blank">GarageBiz</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Через неделю после первого ролика уже получил первые деньги. Отмечу интересные офферы, своевременную оплату приведенных заявок.
-                        </p>
-
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Константин</p>
+                        <a href="https://nakopi-deneg.ru/" class="reviews-card-company">Накопи денег</a>
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        Офферы гораздо интереснее для обеих сторон, чем  «приведи друга». Выплаты – 1 раз в неделю по понедельникам без всяких мутных посредников и комиссий.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="2">
+                </div>
 
-                    <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
+            </div>
 
-                    <div class="reviews-card-text">
+            <div class="reviews-card" draggable="false">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Константин</p>
-                            <a href="https://nakopi-deneg.ru/" class="reviews-card-company" target="_blank">Накопи денег</a>
-                        </div>
+                <img src="assets/card_icons/oleg.png" alt="">
 
-                        <p class="reviews-card-bottom-content">
-                            Офферы обычно гораздо интереснее для обеих сторон, чем «приведи друга». Выплаты – 1 раз в неделю по понедельникам без всяких мутных посредников и комиссий.
-                        </p>
+                <div class="reviews-card-text">
 
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Олег</p>
+                        <a href="https://www.youtube.com/c/GARAGEBIZ" class="reviews-card-company">GarageBiz</a>
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        Через неделю после первого ролика уже получил первые деньги. Отмечу интересные офферы, своевременную оплату приведенных заявок.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="3">
+                </div>
 
-                    <img src="assets/card_icons/unknown.svg" alt="Фотография пользователя отсутствует">
+            </div>
 
-                    <div class="reviews-card-text">
+            <div class="reviews-card" draggable="false">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Иван</p>
-                            <span class="reviews-card-company reviews-card-company_not-link">ТГ-канал: скидки и промокоды</span>
-                        </div>
+                <img src="assets/card_icons/konstantin.svg" alt="">
 
-                        <p class="reviews-card-bottom-content">
-                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется сразу, а большая часть денег уже приходит через две недели.
-                            Выплаты в Lobsters тоже весьма частые – раз в неделю.
-                        </p>
+                <div class="reviews-card-text">
 
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Иван</p>
+                        <!-- <p class="reviews-card-company">Накопи денег</p> -->
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется в сразу, а большая часть денег уже приходит через две недели. <br>
+                        Выплаты в Lobsters тоже весьма частые – раз в неделю.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="4">
+                </div>
 
-                    <img src="assets/card_icons/unknown.svg" alt="Фотография пользователя отсутствует">
+            </div>
 
-                    <div class="reviews-card-text">
+            <div class="reviews-card" draggable="false">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Максим</p>
-                            <span class="reviews-card-company reviews-card-company_not-link">Сервис финансовых продуктов</span>
-                        </div>
+                <img src="assets/card_icons/oleg.png" alt="">
 
-                        <p class="reviews-card-bottom-content">
-                            Работаю с Lobsters с 2020 года. Платформа постоянно развивается и добавляет новые высококонверсионные офферы.
-                            <br>
-                            Из плюсов нравится оперативная поддержка и стабильные выплаты, задержки в 1-3 дня бывают крайне редко.
-                        </p>
+                <div class="reviews-card-text">
 
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Максим</p>
+                        <!-- <p class="reviews-card-company">Накопи денег</p> -->
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        Работаю с Lobsters с 2020 года. Можно неплохо зарабатывать, особенно, если вы блогер или имеете свою ютуб-канал. Деньги стабильно выплачиваются каждую неделю, задержки в 1-3 дня бывают крайне редко.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="5">
+                </div>
 
-                    <img src="assets/card_icons/grabej.png" alt="Фотография пользователя Вячеслав">
+            </div>
 
-                    <div class="reviews-card-text">
+            <div class="reviews-card" draggable="false">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Вячеслав</p>
-                            <a href="https://t.me/robberoidd" class="reviews-card-company" target="_blank">Грабеж</a>
-                        </div>
+                <img src="assets/card_icons/konstantin.svg" alt="">
 
-                        <p class="reviews-card-bottom-content">
-                            Если вы ищете удобную, понятную и простую ПП для работы с Тинькофф — вы по адресу. Зарегистрировался, создал ссылку, опубликовал креатив, получил доход. Отдельный плюс создателям за электронный обмен всеми документами и еженедельные выплаты.
-                        </p>
+                <div class="reviews-card-text">
 
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Вячеслав</p>
+                        <a href="https://t.me/robberoidd" class="reviews-card-company">Грабеж</a>
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        Если вы ищете удобную, понятную и простую ПП для работы с Тинькофф — вы по адресу. Зарегистрировался, создал ссылку, опубликовал креатив, получил доход. Отдельный плюс создателям за электронный обмен всеми документами и еженедельные выплаты.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="6">
+                </div>
 
-                    <img src="assets/card_icons/vse-dengi.png" alt="Фотография пользователя Максим">
+            </div>
 
-                    <div class="reviews-card-text">
+            <div class="reviews-card" draggable="false">
 
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Максим</p>
-                            <a href="https://vse-dengy.ru/" class="reviews-card-company" target="_blank">Все деньги</a>
-                        </div>
+                <img src="assets/card_icons/konstantin.svg" alt="">
 
-                        <p class="reviews-card-bottom-content">
-                            В Lobsters мне больше всего нравятся выгодные офферы, где помимо веб-мастера, вознаграждение получает и потенциальный клиент за заказ продукта (карты). Благодаря такому подходу, даже небольшой трафик приносит хорошую отдачу. Довольный клиент - сытый веб-мастер.
-                        </p>
+                <div class="reviews-card-text">
 
+                    <div class="reviews-card-top-text">
+                        <p class="reviews-card-name">Максим</p>
+                        <a href="https://vse-dengy.ru/" class="reviews-card-company">Все деньги</a>
                     </div>
 
-                </li>
+                    <p class="reviews-card-bottom-content">
+                        В Lobsters мне нравятся выгодные офферы, где помимо веб-мастера, вознаграждение получает и потенциальный клиент за заказ продукта (карты). Благодаря такому подходу, даже небольшой трафик приносит хорошую отдачу.
+                    </p>
 
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="7">
+                </div>
 
-                    <img src="assets/card_icons/kartoved.png" alt="Фотография пользователя Алена">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Алена</p>
-                            <a href="https://vse-dengy.ru/" class="reviews-card-company" target="_blank">
-                                КартоВед
-                            </a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Работаю с партнеркой уже 2,5 года. Главный плюс для меня - высокая скорость обработки лидов и еженедельные выплаты без дополнительных телодвижений с моей стороны.
-                            <br>
-                            Поддержка выше всяких похвал - отзывчивая, оперативно решает возникающие проблемы. Ребята заинтересованы в сотрудничестве и готовы помогать, это подкупает.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide reviews-card-clickable" data-number="8">
-
-                    <img src="assets/card_icons/autosprav.png" alt="Фотография пользователя Азат">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Азат</p>
-                            <a href="https://www.youtube.com/@Avtospravochnaya/videos" class="reviews-card-company" target="_blank">Автосправочная
-                            </a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            С Lobsters начал работать с февраля 2023 года. Получил бонус за быстрый старт, так как в первую же неделю с моих площадок были подтвержденные заявки.
-                            <br>
-                            Что радует - после регистрации на платформе своих площадок дальнейшая модерация каждого размещения не требуется - сам выбираешь нужный продукт, создаешь ссылку и размещаешь рекламный материал. Это позволяет оперативно размещать видеоролики и посты в любое время, 24/7
-                        </p>
-
-                    </div>
-
-                </li>
-
-            </ul>
+            </div>
         </div>
 
     </section>
@@ -806,20 +619,21 @@
             <div class="hero-wrapper" id="bottom-hero">
 
                 <div class="hero-content" id="bottom-hero-content">
-                    <h2>Получите первую выплату <br class="btm-hero-title-br-desktop"> уже <br class="btm-hero-title-br1"> через неделю</h2>
+                    <h1>Получите первую выплату <br class="btm-hero-title-br-desktop"> уже <br class="btm-hero-title-br1"> через неделю</h1>
                     <p>Начислим <span id="hero-highlighted">бонус 2500₽</span>, если за первую неделю у вас подтвердится минимум 1 заявка</p>
-                    <button class="hero-button hero-button--2" id="begin-work-button">Начать работу</button>
+                    <button class="hero-button" id="begin-work-button" >Начать работу</button>
+                    <img src="assets/decor_elements/arrow_black2.svg" id="arrow-black2">
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <div class="lobster2"></div>
-                        <div id="wave2"></div>
+                        <img src="assets/images/lobster2.svg" alt="" class="lobster2">
+                        <img src="assets/decor_elements/wave.svg" id="wave2">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="decor-yellow-black"></div>
+        <img src="assets/decor_elements/decor_yellow-black.svg" id="decor-yellow-black">
     </section>
 
     <footer class="footer">
@@ -827,20 +641,12 @@
             <div class="footer-wrapper">
 
                 <nav class="footer-nav">
-                    <img src="assets/images/logo.svg" width="168" height="26" alt="Логотип компании Lobsters">
+                    <img src="assets/images/logo_white.png" alt="lobsters logo">
 
-                    <ul class="footer-media-icons">
-                        <li>
-                            <a href="mailto:account@lobsters.pro" aria-label="Написать на почту">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M9.3 9.3h13.4c.9 0 1.6.8 1.6 1.7v10c0 1-.7 1.7-1.6 1.7H9.3c-.9 0-1.6-.8-1.6-1.7V11c0-1 .7-1.7 1.6-1.7Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".8" d="M24.3 11 16 16.8 7.7 11"/><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/lobsters_support" aria-label="Написать в телеграм">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32"><rect width="31" height="31" x=".5" y=".5" stroke="#F5F5F6" rx="5.5"/><path fill="#fff" d="m24.5 7.6-.6.2a397.8 397.8 0 0 0-8.5 3.6L7.3 15l-.5.2-.3.4a1 1 0 0 0-.2.6c.1.9 1 1.1 1 1.1l4 1.3a1044 1044 0 0 0 1.7 5.6l.2.2h.2c.5.2.8 0 .8 0l2.4-2.3 4 3c.7.4 1.3.2 1.6 0l.5-.7 3-15v-.9a1 1 0 0 0-1.2-.8Zm0 1h.2v.5L22 24l-.2.2c-.1.2-.3.2-.7 0L16.7 21h-.1l-1.3-1 7.2-8.5a.4.4 0 0 0-.6-.6l-10.4 7-3.9-1.4s-.4-.2-.4-.4l.1-.2h.3v-.1l8.1-3.5a9537.4 9537.4 0 0 1 8.8-3.7Zm-4.7 4.7-5.5 6.4v.2l-.8 3.2-1.4-4.7 7.7-5.1ZM15 20.7l1 .8-1.5 1.3.5-2Z"/></svg>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="footer-media-icons">
+                        <a href="mailto:account@lobsters.pro"><img src="assets/icons_media/mail_footer.svg" alt="email"></a>
+                        <a href="https://t.me/lobsters_support"><img src="assets/icons_media/telegram_footer.svg" alt="telegram"></a>
+                    </div>
                 </nav>
 
                 <div class="footer-columns-holder">
@@ -848,14 +654,10 @@
                     <div class="footer-column">
                         <h3 class="footer-column-title">Меню</h3>
 
-                        <ul class="footer-column-links">
-                            <li>
-                                <a class="footer-column-link" href="index.html">Блогер</a>
-                            </li>
-                            <li>
-                                <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
-                            </li>
-                        </ul>
+                        <div class="footer-column-links">
+                            <a class="footer-column-link" href="index.html">Вебмастер</a>
+                            <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
+                        </div>
 
                     </div>
 
@@ -863,17 +665,11 @@
                     <div class="footer-column">
                         <h3 class="footer-column-title">Документы</h3>
 
-                        <ul class="footer-column-links">
-                            <li>
-                                <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
-                            </li>
-                            <li>
-                                <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
-                            </li>
-                            <li>
-                                <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
-                            </li>
-                        </ul>
+                        <div class="footer-column-links">
+                            <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
+                            <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
+                            <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
+                        </div>
 
                     </div>
                 </div>
@@ -881,326 +677,177 @@
         </div>
     </footer>
 
-    <div class="reviews-popup">
-        <div class="reviews-popup__wrapper swiper">
-
-            <div class="reviews-slider-buttons">
-                <div class="review-buttons-holder">
-                    <button class="slider-button" id="popup-reviews-prev-button"><span></span></button>
-
-                    <div class="reviews-popup-pagination swiper-pagination"></div>
-
-                    <button class="slider-button" id="popup-reviews-next-button"><span></span></button>
-                </div>
-            </div>
-
-            <ul class="reviews-cards-slider swiper-wrapper">
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/oleg.png" alt="Фотография пользователя Олег">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Олег</p>
-                            <a href="https://www.youtube.com/c/GARAGEBIZ" class="reviews-card-company" target="_blank">GarageBiz</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Через неделю после первого ролика уже получил первые деньги. Отмечу интересные офферы, своевременную оплату приведенных заявок.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/konstantin.svg" alt="Фотография пользователя Константин">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Константин</p>
-                            <a href="https://nakopi-deneg.ru/" class="reviews-card-company" target="_blank">Накопи денег</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Офферы обычно гораздо интереснее для обеих сторон, чем «приведи друга». Выплаты – 1 раз в неделю по понедельникам без всяких мутных посредников и комиссий.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/unknown.svg" alt="Фотография пользователя отсутствует">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Иван</p>
-                            <span class="reviews-card-company reviews-card-company_not-link">ТГ-канал: скидки и промокоды</span>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Больше всего в Lobsters мне нравится, как быстро приходят результаты. Я размещаю пост у себя в канале, количество кликов обновляется сразу, а большая часть денег уже приходит через две недели.
-                            Выплаты в Lobsters тоже весьма частые – раз в неделю.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/unknown.svg" alt="Фотография пользователя отсутствует">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Максим</p>
-                            <span class="reviews-card-company reviews-card-company_not-link">Сервис финансовых продуктов</span>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Работаю с Lobsters с 2020 года. Платформа постоянно развивается и добавляет новые высококонверсионные офферы.
-                            <br>
-                            <br>
-                            Из плюсов нравится оперативная поддержка и стабильные выплаты, задержки в 1-3 дня бывают крайне редко.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/grabej.png" alt="Фотография пользователя Вячеслав">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Вячеслав</p>
-                            <a href="https://t.me/robberoidd" class="reviews-card-company" target="_blank">Грабеж</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Если вы ищете удобную, понятную и простую ПП для работы с Тинькофф — вы по адресу. Зарегистрировался, создал ссылку, опубликовал креатив, получил доход. Отдельный плюс создателям за электронный обмен всеми документами и еженедельные выплаты.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/vse-dengi.png" alt="Фотография пользователя Максим">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Максим</p>
-                            <a href="https://vse-dengy.ru/" class="reviews-card-company" target="_blank">Все деньги</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            В Lobsters мне больше всего нравятся выгодные офферы, где помимо веб-мастера, вознаграждение получает и потенциальный клиент за заказ продукта (карты). Благодаря такому подходу, даже небольшой трафик приносит хорошую отдачу. Довольный клиент - сытый веб-мастер.
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/kartoved.png" alt="Фотография пользователя Алена">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Алена</p>
-                            <a href="https://vse-dengy.ru/" class="reviews-card-company" target="_blank">КартоВед</a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            Работаю с партнеркой уже 2,5 года. Здесь самый большой выбор офферов Тинькофф с щедрыми бонусами для подписчиков.
-                            <br>
-                            <br>
-                            Довольно удобная статистика, особенно по выплатам - сразу вижу, сколько оплачено лидов по конкретному офферу. В других партнерках для этого приходится возиться с фильтрами.
-                            <br>
-                            <br>
-                            Поддержка выше всяких похвал - отзывчивая, оперативно решает возникающие проблемы. Ребята заинтересованы в сотрудничестве и готовы помогать, это подкупает. На Новый год подарили подписку на онлайн-кинотеатр - неожиданно и приятно)
-                            <br>
-                            <br>
-                            Ну и главный плюс для меня - высокая скорость обработки лидов и еженедельные выплаты без дополнительных телодвижений с моей стороны. В этом вам нет равных!
-                            <br>
-                            <br>
-                            Благодарю за взаимовыгодное и плодотворное сотрудничество!
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li class="reviews-card swiper-slide">
-
-                    <img src="assets/card_icons/autosprav.png" alt="Фотография пользователя Азат">
-
-                    <div class="reviews-card-text">
-
-                        <div class="reviews-card-top-text">
-                            <p class="reviews-card-name">Азат</p>
-                            <a href="https://www.youtube.com/@Avtospravochnaya/videos" class="reviews-card-company" target="_blank">Автосправочная
-                            </a>
-                        </div>
-
-                        <p class="reviews-card-bottom-content">
-                            У меня автомобильный канал на YouTube, а также ряд площадок в других соцсетях по этой же тематике.
-                            <br>
-                            <br>
-                            С компанией Lobsters начал работать с февраля 2023 года. Получил бонус за быстрый старт, так как в первую же неделю с моих площадок были подтвержденные заявки.
-                            <br>
-                            <br>
-                            Учитывая тематику, в моём случае наибольшую эффективность показывают банковские карты для водителей Tinkoff Drive. Однако, и по другим продуктам бывают интересные акции с выгодой для подписчиков, что в конечном итоге даёт подтвержденные заявки и доп. доход.
-                            <br>
-                            <br>
-                            Что радует - после регистрации на платформе своих площадок дальнейшая модерация каждого размещения не требуется - сам выбираешь нужный продукт, создаешь ссылку и размещаешь рекламный материал. Это позволяет оперативно размещать видеоролики и посты в любое время, 24/7.
-                            <br>
-                            <br>
-                            Выплаты приходят стабильно, каждый понедельник.
-                        </p>
-
-                    </div>
-
-                </li>
-
-            </ul>
-
-        </div>
-    </div>
 
    <div class="mobile-menu hidden">
        <div class="mobile-menu-top">
            <div class="close-holder">
-               <button class="close" id="mobile-menu-close"></button>
+               <div class="close" id="mobile-menu-close"></div>
            </div>
            <nav class="mobile-menu-nav">
-               <a href="index.html">Блогер</a>
+               <a href="index.html">Веб-мастер</a>
                <a href="advertiser.html">Рекламодатель</a>
+               <!-- <a href="">FAQ</a> -->
            </nav>
        </div>
 
        <div class="mobile-menu-buttons">
-            <a href="https://stat.thelobsters.ru/login" class="mobile-menu-button" id="mobile-login-button">Войти</a>
+            <button class="mobile-menu-button" id="mobile-login-button">Войти</button>
             <button class="mobile-menu-button" id="mobile-registration-button">Регистрация</button>
        </div>
+   </div>
+
+
+   <div class="login-popup hidden">
+        <div class="login-popup-top">
+            <h1>Вход</h1>
+            <div class="close" id="login-popup-close"></div>
+        </div>
+
+        <form class="sign-in-form" method="post">
+
+            <label for="email">Email или телефон</label>
+            <input type="text" name="email" autocomplete="email" required/>
+
+            <label for="password">Пароль</label>
+            <input type="text" name="password" autocomplete="email" required/>
+
+            <div class="sign-in-form-bottom">
+                <div class="remember-me-checkbox">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Запомнить меня</label>
+                </div>
+                <a class="forgot-password">Забыли пароль?</a>
+            </div>
+
+            <button type="submit" class="sign-in-form-button">Войти</button>
+        </form>
+
+        <div class="login-other-buttons">
+            <button class="login-other-button"><img src="assets/icons_media/chrome-login.svg">Войти через Google</button>
+            <button class="login-other-button"><img src="assets/icons_media/apple-login.svg" id="apple">Войти через Apple</button>
+            <button class="login-other-button"><img src="assets/icons_media/facebook-login.svg">Войти через Facebook</button>
+        </div>
    </div>
 
    <div class="registration-popup hidden">
         <div class="registration-popup-top">
             <h1>Регистрация</h1>
-            <button class="close" id="registration-popup-close"></button>
+            <div class="close" id="registration-popup-close"></div>
         </div>
 
-       <div class="registration-popup-content">
+        <p class="login-popup-warning">
+            Внимание! Указывайте только корректные контактные данные. Если мы не сможем связаться с вами, вы не получите доступ к личному кабинету
+        </p>
 
-           <div class="registration-popup-success">
+        <form class="registration-popup-form" method="post">
 
-               <div class="registration-popup-success__img"></div>
+            <label for="name">ФИО</label>
+            <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО" required/>
 
-               <span class="registration-popup-success__title">Регистрация прошла успешно!</span>
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" autocomplete="name" placeholder="Укажите e-mail" required/>
 
-               <button class="registration-popup-success__button">Продолжить</button>
+            <label for="media-link">Телеграм / whats app</label>
+            <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" required/>
 
-           </div>
+            <label for="phone">Телефон</label>
+            <input type="text" name="phone" id="phone" placeholder="Укажите телефон" required/>
 
+            <label for="platform">Площадка</label>
+            <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое" required/>
 
-           <p class="login-popup-warning">
-               Внимание! Указывайте только корректные контактные данные. Если мы не сможем связаться с вами, вы не получите доступ к личному кабинету
-           </p>
+            <div class="registration-drop-down-holder">
+                <button class="registration-popup-dropdown-button">Ваш статус <div></div></button>
+                <ul class="status-list hidden">
+                    <li class="status-list-item">
+                        <input type="radio" name="status" id="fiz">
+                        <label for="fiz">Физ. лицо, самозанятость</label>
+                    </li>
 
-           <form class="registration-popup-form">
+                    <li class="status-list-item">
+                        <input type="radio" name="status" id="ip">
+                        <label for="ip">ИП</label>
+                    </li>
+                    <li class="status-list-item">
+                        <input type="radio" name="status" id="urlico">
+                        <label for="urlico">Юридическое лицо</label>
+                    </li>
+                    <div class="close" id="status-list-close-button"></div>
+                </ul>
+            </div>
 
-               <div class="reg-form">
-                   <label for="name">ФИО</label>
-                   <input type="text" name="name" id="name" autocomplete="name" placeholder="ФИО"/>
-               </div>
+            <div class="agreement-checkbox">
+                <input type="checkbox" id="agreement" name="agreement">
+                <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
+            </div>
 
-               <div class="reg-form">
-                   <label for="email">E-mail</label>
-                   <input type="text" name="email" id="email" autocomplete="email" placeholder="Укажите e-mail"/>
-               </div>
+            <button class="registration-popup-submit-button">Оставить заявку</button>
+        </form>
+   </div>
 
-               <div class="reg-form">
-                   <label for="media-link">Телеграм / whats app</label>
-                   <input type="text" name="media-link" id="media-link" placeholder="Ссылка на телеграм или whats app" />
-               </div>
+   <div class="forgot-password-popup hidden">
+    <div class="forgot-password-popup-top">
+        <h1>Восстановление пароля</h1>
+        <div class="close" id="forgot-password-popup-close"></div>
+    </div>
 
-               <div class="reg-form">
-                   <label for="phone">Телефон</label>
-                   <input id="phone" data-maska="+7 ### ###-##-##" placeholder="Укажите телефон">
-               </div>
+    <p class="forgot-password-popup-warning">
+        Если вы забыли пароль, введите ваш e-mail
+    </p>
 
-               <div class="reg-form">
-                   <label for="platform">Площадка</label>
-                   <input type="text" name="platform" id="platform" placeholder="Ссылка на сайт / телеграм / дзен / другое"/>
-               </div>
+    <form class="forgot-password-form" method="post">
+        <label for="forgot-password-email">E-mail</label>
+        <input name="email" type="text" required>
 
-               <div class="registration-drop-down-holder">
-                   <button class="registration-popup-dropdown-button">Ваш статус<span></span></button>
-                   <ul class="status-list hidden">
-                       <li class="status-list-item">
-                           <input type="radio" name="status" id="fiz" value="Физ. лицо">
-                           <label for="fiz">Физ. лицо, самозанятость</label>
-                       </li>
+        <button type="submit">Восстановить</button>
+    </form>
 
-                       <li class="status-list-item">
-                           <input type="radio" name="status" id="ip" value="ИП">
-                           <label for="ip">ИП</label>
-                       </li>
-                       <li class="status-list-item">
-                           <input type="radio" name="status" id="urlico" value="Юр. лицо">
-                           <label for="urlico">Юридическое лицо</label>
-                       </li>
-
-                       <button class="close" id="status-list-close-button"></button>
-                   </ul>
-               </div>
-
-               <div class="agreement-checkbox" data-validate="regFormBlock">
-                   <input type="checkbox" id="agreement" name="agreement" required data-validate="regInput">
-                   <label for="agreement">Я принимаю <a href="https://lobsters.pro/oferta">Оферту</a> и <a href="https://lobsters.pro/privacy">Политику обработки персональных данных</a></label>
-               </div>
-
-               <button class="registration-popup-submit-button" id="registration">
-                   <span class="loader">
-                       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-                            <path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
-                              <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
-                            </path>
-                        </svg>
-                   </span>
-                   <span class="registration-popup-submit-button__text">Оставить заявку</span>
-               </button>
-           </form>
-
-       </div>
+    <div class="return-to-login">Вернуться ко входу</div>
 
    </div>
 
+   <script>
+       function forgotPasswordPopUp() {
+            const hero = document.querySelector(".top-hero")
+            const forgotPasswordPopUp = document.querySelector(".forgot-password-popup")
+            const forgotPasswordButton = document.querySelector(".forgot-password")
+            const forgotPasswordClose = document.querySelector("#forgot-password-popup-close")
+            const loginPopup = document.querySelector(".login-popup")
+            const returnToLogin = document.querySelector(".return-to-login")
+            const header = document.querySelector(".header")
+            const body = document.querySelector("body")
+
+            forgotPasswordButton.addEventListener('click', function(){
+                forgotPasswordPopUp.classList.remove('hidden')
+                forgotPasswordPopUp.classList.add("shown")
+                loginPopup.classList.remove("shown")
+                loginPopup.classList.add("hidden")
+                header.classList.add("header-popup-active")
+            })
+
+            forgotPasswordClose.addEventListener('click', function(){
+                forgotPasswordPopUp.classList.add('hidden')
+                forgotPasswordPopUp.classList.remove("shown")
+                header.classList.remove("header-popup-active")
+                body.classList.remove("body-active-pop-up")
+                hero.classList.remove("hero-pop-up-displayed")
+            })
+
+            returnToLogin.addEventListener('click', function(){
+                forgotPasswordPopUp.classList.add('hidden')
+                forgotPasswordPopUp.classList.remove("shown")
+                loginPopup.classList.add("shown")
+                loginPopup.classList.remove("hidden")
+            })
+
+
+
+        }
+
+        forgotPasswordPopUp()
+   </script>
+
     <script src="main.js"></script>
     <script src="popups.js"></script>
-
-    <script async>
-        document.querySelector('.video-holder').addEventListener('click', (e) => {
-            e.target.innerHTML = `
-                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6DgsVKKCKOE?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            `
-        })
-    </script>
-
 </body>
 </html>

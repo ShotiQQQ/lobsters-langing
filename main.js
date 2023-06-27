@@ -1,3 +1,39 @@
+
+function otherCasesSliderClick() {
+    const otherCasesSlider = document.querySelector(".other-cases-cards-slider")
+    const otherCasesPrevBtn = document.querySelector("#other-cases-next-button")
+    const otherCasesNextBtn = document.querySelector('#other-cases-prev-button')
+
+    const otherCasesFirstCard = document.querySelectorAll(".other-cases-card")[0]
+    let otherCasesFirstCardWidth = otherCasesFirstCard.clientWidth
+
+    otherCasesNextBtn.addEventListener('click', function(){
+        otherCasesSlider.scrollLeft -=  otherCasesFirstCardWidth
+    })
+
+    otherCasesPrevBtn.addEventListener('click', function(){
+        otherCasesSlider.scrollLeft +=  otherCasesFirstCardWidth
+    })
+
+}
+
+function reviewsSliderClick() {
+    const reviewsSlider = document.querySelector(".reviews-cards-slider")
+    const reviewsPrevBtn = document.querySelector("#reviews-next-button")
+    const reviewsNextBtn = document.querySelector('#reviews-prev-button')
+
+    const reviewsFirstCard = document.querySelectorAll(".reviews-card ")[0]
+    let reviewsFirstCardWidth = reviewsFirstCard.clientWidth
+
+    reviewsNextBtn.addEventListener('click', function(){
+        reviewsSlider.scrollLeft -=  reviewsFirstCardWidth
+    })
+
+    reviewsPrevBtn.addEventListener('click', function(){
+        reviewsSlider.scrollLeft +=  reviewsFirstCardWidth
+    })
+}
+
 function stickyHeader() {
     window.onscroll = function() {myFunction()};
 
@@ -19,6 +55,8 @@ function stickyHeader() {
 }
 
 
+<<<<<<< Updated upstream
+=======
 const otherCasesSwiper = new Swiper('.other-cases-slider', {
     navigation: {
         nextEl: '#other-cases-next-button',
@@ -97,13 +135,13 @@ const addListenerReviews = (swiper) => {
             if (event.target.classList.contains('reviews-card-company')) {
                 return null;
             } else {
-                document.body.style.overflow = 'hidden';
-                document.querySelector('html').style.overflow = 'hidden';
+                document.body.classList.add('body-active-pop-up');
+                document.querySelector('header').classList.add('header-popup-active');
                 popup.classList.add('reviews-popup_active');
                 popup.addEventListener('click', popup => {
                     if (popup.target.classList.contains('reviews-popup_active')) {
-                        document.body.style.overflow = '';
-                        document.querySelector('html').style.overflow = '';
+                        document.body.classList.remove('body-active-pop-up');
+                        document.querySelector('header').classList.remove('header-popup-active');
                         popup.target.classList.remove('reviews-popup_active');
                     }
                 })
@@ -116,4 +154,7 @@ const addListenerReviews = (swiper) => {
 
 initSwiperPopup();
 
+>>>>>>> Stashed changes
 stickyHeader()
+otherCasesSliderClick()
+reviewsSliderClick()
