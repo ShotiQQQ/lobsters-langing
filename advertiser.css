@@ -1080,13 +1080,19 @@ ul {
 
 .body-active-pop-up {
     overflow: hidden;
-    padding-right: 8px;
 }
 
-@-moz-document url-prefix() {
+@media (min-width: 1024px) {
     .body-active-pop-up {
         overflow: hidden;
-        padding-right: 0;
+        padding-right: 8px;
+    }
+    
+    @-moz-document url-prefix() {
+        .body-active-pop-up {
+            overflow: hidden;
+            padding-right: 0;
+        }
     }
 }
 
