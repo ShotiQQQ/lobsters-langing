@@ -13,7 +13,7 @@ const warningText = document.querySelector('.login-popup-warning');
 const successRegBlock = document.querySelector('.registration-popup-success');
 const successButton = document.querySelector('.registration-popup-success__button');
 
-const params = new URLSearchParams();
+const params = new URLSearchParams(window.location.search);
 
 try {
   const { MaskInput } = Maska;
@@ -100,8 +100,7 @@ validator
           dataOfSelect = item.value;
         }
       })
-      
-      console.log(dataOfSelect)
+
       return dataOfSelect;
 
     };
