@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="advertiser.css">
     <link rel="stylesheet" href="advertiser_media.css">
     <title>Lobsters</title>
@@ -15,15 +15,33 @@
             <div class="header-nav">
 
                 <a href="advertiser.html" class="lobsters-logo-link">
-                    <img src="assets/images/logo.png" alt="lobsters logo">
+                    <img src="assets/images/logo.svg" width="168" height="26" alt="Логотип компании Lobsters">
                 </a>
 
                 <ul class="header-nav-links nav-list">
-                    <li class="nav-item" id="first-link-tablet"><a href="index.html" >Веб-мастер</a></li>
+                    <li class="nav-item" id="first-link-tablet"><a href="index.html" >Блогер</a></li>
                     <li class="nav-item"><a href="advertiser.html">Рекламодатель</a></li>
                 </ul>
 
-                <button class="header-menu-button"><img src="assets/images/mobile_menu_button.svg"></button>
+                <ul class="header-buttons">
+                    <li>
+                        <a href="https://t.me/lobsters_support" class="header-button_rounded header-button_rounded_tg" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2998 2.87446C21.066 2.88472 20.8385 2.94978 20.6332 3.03196C20.4301 3.11359 19.2607 3.61271 17.5339 4.35102C15.807 5.08934 13.5622 6.05078 11.337 7.00415C6.88655 8.91088 2.51324 10.787 2.51324 10.787L2.54511 10.7748C2.54511 10.7748 2.28116 10.863 2.01355 11.0495C1.87974 11.1427 1.73579 11.263 1.61792 11.4385C1.50006 11.614 1.41389 11.8627 1.44636 12.1257C1.56042 13.0496 2.51792 13.3116 2.51792 13.3116L2.52167 13.3135L6.7948 14.776C6.90375 15.1395 8.09085 19.1016 8.35199 19.9407C8.4962 20.4046 8.63119 20.6722 8.77199 20.8548C8.84244 20.9461 8.91628 21.0168 8.99792 21.0685C9.03036 21.0891 9.06448 21.1045 9.09824 21.1182H9.10011C9.10426 21.12 9.10816 21.1202 9.1123 21.122L9.10105 21.1191C9.10889 21.1223 9.11663 21.1276 9.12449 21.1304C9.13972 21.1357 9.14905 21.1356 9.16855 21.1398C9.65793 21.3106 10.0629 20.9935 10.0629 20.9935L10.0798 20.9804L12.7048 18.5457L16.9648 21.8673L17.0182 21.8916C17.7639 22.2227 18.4382 22.038 18.8117 21.7341C19.1851 21.4303 19.332 21.0385 19.332 21.0385L19.3479 20.9973L22.4782 4.68196C22.5583 4.31695 22.5697 4.00144 22.4942 3.71633C22.4186 3.43123 22.2351 3.18339 22.0048 3.04602C21.7745 2.90865 21.5336 2.8642 21.2998 2.87446ZM21.3251 3.8504C21.4201 3.846 21.4904 3.85685 21.5126 3.87008C21.5348 3.88331 21.5447 3.88157 21.566 3.96196C21.5873 4.04234 21.5989 4.21166 21.5407 4.47665L21.5389 4.48227L18.4264 20.7029C18.419 20.7192 18.3541 20.8693 18.206 20.9898C18.055 21.1127 17.887 21.2086 17.441 21.0216L12.7826 17.3888L12.6514 17.2857L12.6485 17.2885L11.2554 16.2432L19.0845 7.03227C19.1446 6.96168 19.1831 6.87517 19.1951 6.78321C19.2071 6.69124 19.1923 6.59776 19.1523 6.51406C19.1123 6.43036 19.049 6.36004 18.9699 6.31158C18.8908 6.26313 18.7994 6.23862 18.7067 6.24102C18.6161 6.24337 18.528 6.27133 18.4526 6.32165L7.12386 13.8741L2.84417 12.4088C2.84417 12.4088 2.4192 12.1723 2.39886 12.0076C2.39773 11.9985 2.39271 12.0067 2.4148 11.9738C2.43688 11.941 2.49239 11.8854 2.56199 11.837C2.70117 11.74 2.86011 11.6813 2.86011 11.6813L2.87605 11.6757L2.89199 11.6691C2.89199 11.6691 7.26553 9.79297 11.7157 7.88633C13.9408 6.93302 16.1852 5.97228 17.9117 5.23415C19.6377 4.4962 20.8848 3.96504 20.9904 3.92258C21.1106 3.87444 21.2302 3.85479 21.3251 3.8504ZM16.1332 9.02165L10.196 16.007L10.1932 16.0098C10.184 16.0209 10.1752 16.0325 10.167 16.0445C10.1576 16.0574 10.1488 16.0709 10.1407 16.0848C10.1074 16.1414 10.086 16.2042 10.0779 16.2695C10.0779 16.2707 10.0779 16.272 10.0779 16.2732L9.30449 19.7513C9.29163 19.7138 9.28262 19.7 9.26886 19.6557V19.6548C9.0232 18.8654 7.90319 15.1287 7.74824 14.612L16.1332 9.02165ZM10.8664 17.1516L11.9332 17.9523L10.3657 19.4054L10.8664 17.1516Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:account@lobsters.pro" class="header-button_rounded header-button_rounded_email">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6L12 13L2 6" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="header-menu-button"></button>
             </div>
         </div>
     </header>
@@ -34,7 +52,7 @@
 
                 <div class="hero-content">
                     <div class="hero-content-title-holder">
-                        <img src="assets/decor_elements/squigly_yellow.svg" id="squigly-yellow">
+                        <div id="squigly-yellow"></div>
                         <h1>Получайте тысячи  <br class="hero-br-desktop"> новых клиентов <br class="hero-br-1"> <br class="hero-br-desktop">
                             с помощью Lobsters</h1>
                     </div>
@@ -44,8 +62,8 @@
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <img src="assets/decor_elements/wave.svg" id="wave1">
-                        <img src="assets/images/lobster.svg" alt="" class="lobster1">
+                        <div id="wave1"></div>
+                        <div class="lobster1"></div>
                     </div>
                 </div>
             </div>
@@ -54,30 +72,57 @@
 
     <section class="steps">
         <div class="_container">
-            <div class="steps-row">
-                <div class="steps-card">
-                    <img src="assets/card_icons/cash.svg" class="steps-card-number">
+            <ul class="steps-row">
+                <li class="steps-card">
+                    <div class="steps-card-number steps-card-number--1"></div>
                     <div class="steps-card-content">
-                        <h1>Клиенты, а не обещания</h1>
+                        <h3>Клиенты, а не обещания</h3>
                         <p>Вы платите только за реальных клиентов, а не за лайки и охваты</p>
                     </div>
-                </div>
-                <div class="steps-card">
-                    <img src="assets/card_icons/lightning.svg" class="steps-card-number">
+                </li>
+                <li class="steps-card">
+                    <div class="steps-card-number steps-card-number--2"></div>
                     <div class="steps-card-content">
-                        <h1>Евангелисты, а не блогеры</h1>
+                        <h3>Евангелисты, а не блогеры</h3>
                         <p>Вы получаете заинтересованных в результате рекламы блогеров</p>
                     </div>
-                </div>
-                <div class="steps-card">
-                    <img src="assets/card_icons/graphs.svg" class="steps-card-number">
+                </li>
+                <li class="steps-card">
+                    <div class="steps-card-number steps-card-number--3"></div>
                     <div class="steps-card-content">
-                        <h1>Рост KPI, а не рутины</h1>
+                        <h3>Рост KPI, а не рутины</h3>
                         <p>Мы сами модерируем посты блогеров, отвечаем на вопросы и делаем выплаты</p>
                     </div>
-                </div>
-                <img src="assets/decor_elements/grass_right.svg" id="grass-right">
+                </li>
+            </ul>
+            <div id="grass-right"></div>
+
+            <div class="contacts">
+                <h2 class="contacts__title">Связаться с нами</h2>
+                <p class="contacts__info">
+                    Мы здесь, чтобы помочь! Наша команда всегда открыта для общения. Не стесняйтесь обращаться к нам в любое время, мы с удовольствием ответим на все ваши вопросы
+                </p>
+                <ul class="contacts__list-links">
+                    <li class="contacts__item-link">
+                        <a href="https://t.me/lobsters_support" class="contacts__link contacts__link_tg" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2998 2.87446C21.066 2.88472 20.8385 2.94978 20.6332 3.03196C20.4301 3.11359 19.2607 3.61271 17.5339 4.35102C15.807 5.08934 13.5622 6.05078 11.337 7.00415C6.88655 8.91088 2.51324 10.787 2.51324 10.787L2.54511 10.7748C2.54511 10.7748 2.28116 10.863 2.01355 11.0495C1.87974 11.1427 1.73579 11.263 1.61792 11.4385C1.50006 11.614 1.41389 11.8627 1.44636 12.1257C1.56042 13.0496 2.51792 13.3116 2.51792 13.3116L2.52167 13.3135L6.7948 14.776C6.90375 15.1395 8.09085 19.1016 8.35199 19.9407C8.4962 20.4046 8.63119 20.6722 8.77199 20.8548C8.84244 20.9461 8.91628 21.0168 8.99792 21.0685C9.03036 21.0891 9.06448 21.1045 9.09824 21.1182H9.10011C9.10426 21.12 9.10816 21.1202 9.1123 21.122L9.10105 21.1191C9.10889 21.1223 9.11663 21.1276 9.12449 21.1304C9.13972 21.1357 9.14905 21.1356 9.16855 21.1398C9.65793 21.3106 10.0629 20.9935 10.0629 20.9935L10.0798 20.9804L12.7048 18.5457L16.9648 21.8673L17.0182 21.8916C17.7639 22.2227 18.4382 22.038 18.8117 21.7341C19.1851 21.4303 19.332 21.0385 19.332 21.0385L19.3479 20.9973L22.4782 4.68196C22.5583 4.31695 22.5697 4.00144 22.4942 3.71633C22.4186 3.43123 22.2351 3.18339 22.0048 3.04602C21.7745 2.90865 21.5336 2.8642 21.2998 2.87446ZM21.3251 3.8504C21.4201 3.846 21.4904 3.85685 21.5126 3.87008C21.5348 3.88331 21.5447 3.88157 21.566 3.96196C21.5873 4.04234 21.5989 4.21166 21.5407 4.47665L21.5389 4.48227L18.4264 20.7029C18.419 20.7192 18.3541 20.8693 18.206 20.9898C18.055 21.1127 17.887 21.2086 17.441 21.0216L12.7826 17.3888L12.6514 17.2857L12.6485 17.2885L11.2554 16.2432L19.0845 7.03227C19.1446 6.96168 19.1831 6.87517 19.1951 6.78321C19.2071 6.69124 19.1923 6.59776 19.1523 6.51406C19.1123 6.43036 19.049 6.36004 18.9699 6.31158C18.8908 6.26313 18.7994 6.23862 18.7067 6.24102C18.6161 6.24337 18.528 6.27133 18.4526 6.32165L7.12386 13.8741L2.84417 12.4088C2.84417 12.4088 2.4192 12.1723 2.39886 12.0076C2.39773 11.9985 2.39271 12.0067 2.4148 11.9738C2.43688 11.941 2.49239 11.8854 2.56199 11.837C2.70117 11.74 2.86011 11.6813 2.86011 11.6813L2.87605 11.6757L2.89199 11.6691C2.89199 11.6691 7.26553 9.79297 11.7157 7.88633C13.9408 6.93302 16.1852 5.97228 17.9117 5.23415C19.6377 4.4962 20.8848 3.96504 20.9904 3.92258C21.1106 3.87444 21.2302 3.85479 21.3251 3.8504ZM16.1332 9.02165L10.196 16.007L10.1932 16.0098C10.184 16.0209 10.1752 16.0325 10.167 16.0445C10.1576 16.0574 10.1488 16.0709 10.1407 16.0848C10.1074 16.1414 10.086 16.2042 10.0779 16.2695C10.0779 16.2707 10.0779 16.272 10.0779 16.2732L9.30449 19.7513C9.29163 19.7138 9.28262 19.7 9.26886 19.6557V19.6548C9.0232 18.8654 7.90319 15.1287 7.74824 14.612L16.1332 9.02165ZM10.8664 17.1516L11.9332 17.9523L10.3657 19.4054L10.8664 17.1516Z" fill="#FFF"/>
+                            </svg>
+                            Телеграм
+                        </a>
+                    </li>
+                    <li class="contacts__item-link">
+                        <a href="mailto:account@lobsters.pro" class="contacts__link contacts__link_email">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6L12 13L2 6" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            E-mail
+                        </a>
+                    </li>
+                </ul>
             </div>
+
         </div>
     </section>
 
@@ -86,82 +131,81 @@
             <div class="description-wrapper">
 
                 <div class="description-title-holder">
-                    <h1>От вас — выгодное <br class="descr-br2"> предложение <br class="descr-br1"> для <br class="descr-br2"> блогеров, <br class="descr-br-desktop"> все остальное <br class="descr-br2"> мы <br class="descr-br1"> сделаем сами</h1>
-                    <!-- <img src="/assets/decor_elements/arrow_black1.svg" id="arrow-black-one"> -->
+                    <h2>От вас — выгодное <br class="descr-br2"> предложение <br class="descr-br1"> для <br class="descr-br2"> блогеров, <br class="descr-br-desktop"> все остальное <br class="descr-br2"> мы <br class="descr-br1"> сделаем сами</h2>
                 </div>
 
-                <div class="description-cards">
-                    <div class="description-card">
-                        <img src="assets/card_icons/card_num1.svg" alt="">
+                <ul class="description-cards">
+                    <li class="description-card">
+                        <span class="description-number">01</span>
                         <p>Оставьте заявку на этой странице</p>
-                        <img src="assets/decor_elements/red-arrow-bottom.svg" id="arrow-bottom1">
-                    </div>
-                    <div class="description-card">
-                        <img src="assets/card_icons/card_num2.svg" alt="">
+                        <div id="arrow-bottom1"></div>
+                    </li>
+                    <li class="description-card">
+                        <span class="description-number">02</span>
                         <p>Вместе обсудим условия и подпишем договор</p>
-                        <img src="assets/decor_elements/red-arrow-top.svg" id="arrow-top">
-                    </div>
-                    <div class="description-card">
-                        <img src="assets/card_icons/card_num3.svg" alt="">
+                        <div id="arrow-top"></div>
+                    </li>
+                    <li class="description-card">
+                        <span class="description-number">03</span>
                         <p>Мы добавим ваш бренд на платформу Lobsters </p>
-                        <img src="assets/decor_elements/red-arrow-bottom.svg" id="arrow-bottom2">
-                    </div>
-                    <div class="description-card">
-                        <img src="assets/card_icons/card_num4.svg" alt="">
+                        <div id="arrow-bottom2"></div>
+                    </li>
+                    <li class="description-card">
+                        <span class="description-number">04</span>
                         <p>И вы начнете получать клиентов каждый день</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <img src="assets/decor_elements/decor_purple.svg" id="decor-purple">
-        <img src="assets/decor_elements/decor_red.svg" id="decor-red">
+        <div id="decor-purple"></div>
+        <div id="decor-red"></div>
     </section>
 
     <section class="platforms">
         <div class="_container">
             <div class="platforms-wrapper">
                 <div class="platforms-title-holder">
-                    <h1>С какими площадками <br class="pltfrms-br1"> мы работаем</h1>
-                    <img src="assets/decor_elements/arrow_red2.svg" id="arrow-red">
+                    <h2>С какими площадками <br class="pltfrms-br1"> мы работаем</h2>
+                    <div id="arrow-red"></div>
                 </div>
-                <div class="platforms-icons">
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/youtube.svg" alt="">
+                <ul class="platforms-icons">
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--1"></div>
                         <p>YouTube</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/telegram_platform_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--2"></div>
                         <p>Telegram</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/desktop_platform_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--3"></div>
                         <p>Сайты / Блоги</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/tiktok.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--4"></div>
                         <p>Tik Tok</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/dzen.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--5"></div>
                         <p>Яндекс Дзен</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/mobile_platforms_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--6"></div>
                         <p>Мобильные <br> приложения</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/instagram.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--7"></div>
                         <p>Instagram</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/vk.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--8"></div>
                         <p>Вконтакте</p>
-                    </div>
-                    <div class="platforms-icon">
-                        <img src="assets/platform_icons/heart_media_icon.svg" alt="">
+                    </li>
+                    <li class="platforms-icon">
+                        <div class="platforms-icon-img platforms-icon-img--9"></div>
                         <p>Рассмотрим <br> другие площадки</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -169,26 +213,26 @@
     <section class="review">
         <div class="_container">
             <div class="review-title-holder">
-                <h1 class="review-title-long">Уже 4 года помогаем <br class="rev-br-1"> привлекать толпы клиентов</h1>
-                <h1 class="review-title-short">Уже 4 года <br> стараемся для вас</h1>
+                <h2 class="review-title-long">Уже 4 года помогаем <br class="rev-br-1"> привлекать толпы клиентов</h2>
+                <h2 class="review-title-short">Уже 4 года <br> стараемся для вас</h2>
             </div>
 
             <div class="review-card-holder">
                 <div class="review-card">
-                    <img src="assets/decor_elements/grass_left.svg" id="grass-left">
-                    <img src="assets/company_logos/tinkoff-big.svg" alt="">
+                    <div id="grass-left"></div>
+                    <div class="review-card-logo"></div>
 
                     <div class="review-card-content">
-                        <h1>Tinkoff Bank</h1>
+                        <h3>Tinkoff Bank</h3>
                         <p>Lobsters — 🔥 <br>
                             С ребятами на одной волне, всегда на связи.
                             Высокие конверсии, качественные лиды.</p>
                     </div>
                 </div>
-                <img src="assets/decor_elements/arrow_yellow.svg" id="arrow-yellow">
+                <div id="arrow-yellow"></div>
             </div>
         </div>
-        <img src="assets/decor_elements/decor_blue_left.svg" id="decor-blue">
+        <div id="decor-blue"></div>
     </section>
 
     <section class="hero" id="bottom-hero">
@@ -196,64 +240,63 @@
             <div class="hero-wrapper" id="bottom-hero-wrapper">
 
                 <div class="hero-content" id="bottom-hero-content">
-                    <h1>Оставляйте заявку, <br class="hero-btm-br2"> свяжемся <br class="hero-btm-br1"> и все обсудим</h1>
+                    <h2>Оставляйте заявку, <br class="hero-btm-br2"> свяжемся <br class="hero-btm-br1"> и все обсудим</h2>
                     <button class="hero-button contact" id="hero-button-connect">Связаться с Lobsters</button>
-                    <img src="assets/decor_elements/arrow_black2.svg" id="arrow-black2">
                 </div>
 
                 <div class="hero-image">
                     <div class="hero-image-content">
-                        <img src="assets/images/lobster2.svg" alt="" class="lobster2">
-                        <img src="assets/decor_elements/wave.svg" id="wave2">
+                        <div class="lobster2"></div>
+                        <div id="wave2"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="assets/decor_elements/decor_yellow-black.svg" id="decor-yellow-black">
+
     </section>
 
 
     <footer class="footer">
+        <div id="decor-yellow-black"></div>
         <div class="_container">
+
+
             <div class="footer-wrapper">
 
-                <nav class="footer-nav">
-                    <img src="assets/images/logo_white.png" alt="lobsters logo">
-
-                    <div class="footer-media-icons">
-                        <a href="mailto:account@lobsters.pro"><img src="assets/icons_media/mail_footer.svg" alt="email"></a>
-                        <a href="https://t.me/lobsters_support"><img src="assets/icons_media/telegram_footer.svg" alt="telegram"></a>
-                    </div>
-                </nav>
+                <div class="footer-nav">
+                    <img src="assets/images/logo.svg" width="168" height="26" alt="Логотип компании Lobsters">
+                </div>
 
                 <div class="footer-columns-holder">
 
                     <div class="footer-column">
-                        <h3 class="footer-column-title">Меню</h3>
+                        <h4 class="footer-column-title">Меню</h4>
 
-                        <div class="footer-column-links">
-                            <a class="footer-column-link" href="index.html">Вебмастер</a>
-                            <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
-                        </div>
+                        <ul class="footer-column-links">
+                            <li>
+                                <a class="footer-column-link" href="index.html">Блогер</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="advertiser.html">Рекламодатель</a>
+                            </li>
+                        </ul>
 
                     </div>
 
-                    <!-- <div class="footer-column" id="footer-info">
-                        <h3 class="footer-column-title">Информация</h3>
-
-                        <div class="footer-column-links">
-                            <a class="footer-column-link" href="/">FAQ</a>
-                        </div>
-                    </div> -->
-
                     <div class="footer-column">
-                        <h3 class="footer-column-title">Документы</h3>
+                        <h4 class="footer-column-title">Документы</h4>
 
-                        <div class="footer-column-links">
-                            <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
-                            <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
-                            <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
-                        </div>
+                        <ul class="footer-column-links">
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/privacy">Политика конфедициальности</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/agreement">Пользовательское соглашение</a>
+                            </li>
+                            <li>
+                                <a class="footer-column-link" href="https://lobsters.pro/oferta">Оферта</a>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>
@@ -264,25 +307,20 @@
     <div class="mobile-menu hidden">
         <div class="mobile-menu-top">
             <div class="close-holder">
-                <div class="close" id="mobile-menu-close"></div>
+                <button class="close" id="mobile-menu-close"></button>
             </div>
             <nav class="mobile-menu-nav">
-                <a href="index.html">Веб-мастер</a>
+                <a href="index.html">Блогер</a>
                 <a href="advertiser.html">Рекламодатель</a>
-                <!-- <a href="">FAQ</a> -->
             </nav>
         </div>
 
-        <!-- <div class="mobile-menu-buttons">
-             <button class="mobile-menu-button">Войти</button>
-             <button class="mobile-menu-button">Регистрация</button>
-        </div> -->
     </div>
 
     <div class="contacts-us-popup hidden">
         <div class="contacts-us-popup-top">
-            <h1>Связаться с нами</h1>
-            <div class="close" id="registration-popup-close"></div>
+            <h2>Связаться с нами</h2>
+            <button class="close" id="registration-popup-close"></button>
         </div>
 
         <div class="contacts-us-popup-buttons">
@@ -290,10 +328,6 @@
             <button class="contacts-us-button"><a href="mailto:account@lobsters.pro">Почта</a></button>
         </div>
     </div>
-
-    <!-- <div class="forgot-password"></div> -->
-
-
 
     <script src="popups.js"></script>
     <script src="main.js"></script>
